@@ -26,10 +26,10 @@ li{
     width: 100%;
 }
 .hover:hover{
-    color: #d94b18;
     background-color: white;
     border-radius: 100px;
     transition: all .4s ease-in-out;
+    @apply text-red-600
 }
 .footer{
     background-image: url('./assets/footerimage.png');

@@ -53,16 +53,23 @@ function Hero() {
                     className='outline-none border-[1px] rounded-sm w-full p-4'
                     type="text" />
                 </div>
+                {/* <div className='w-full lg:w-[350px]'> */}
+                  <select className='w-full lg:w-[350px] outline-none border-[1px] rounded-sm p-4' name="" id="">
+                    <option className='outline-none border-[1px] rounded-sm w-full p-4' value="indoorandoutdoor">Indoor and Outdoor</option>
+                    <option className='outline-none border-[1px] rounded-sm w-full p-4' value="indoor">Indoor</option>
+                    <option className='outline-none border-[1px] rounded-sm w-full p-4' value="outdoor">Outdoor</option>
+                  </select>
+                {/* </div> */}
                 <div className='w-full lg:w-[350px] relative'>
                     <input
                     placeholder='' 
-                    className='outline-none border-[1px] rounded-sm w-full pl-8 p-4 date-input'
+                    className='outline-none border-[1px] rounded-sm w-full pl-[1.7rem] p-4 date-input'
                     type="date" />
-                    <button className='text-[white] absolute bottom-3 right-2 bg-orange-500 font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Search <FiSearch className='text-[1.1rem] font-[600]'/></button>
+                    <button className='text-[white] text-[.8rem] absolute bottom-3 right-2 bg-orange-500 font-[500] rounded-[100px] p-1 px-2 flex items-center gap-1'>Search <FiSearch className='text-[.9rem] font-[600]'/></button>
                 </div>
             </div>
           </form>
-          <div className='flex items-center flex-wrap justify-center md:justify-start md:flex-nowrap gap-1 hero-content mt-4'>
+          {/* <div className='flex items-center flex-wrap justify-center md:justify-start md:flex-nowrap gap-1 hero-content mt-4'>
               <div className='flex items-center flex-wrap gap-1'>
                 <span className='flex items-center gap-1'><IoMdTennisball className='text-[#d94b18] text-[1.4rem]'/><button 
                   onClick={(e) =>handleSportChange('tennis')}
@@ -88,7 +95,7 @@ function Hero() {
                   onClick={(e) =>handleSportChange('outdoor')} 
                   className='buttons'>Outdoor</button>
               </div>
-          </div>
+          </div> */}
       </div>
       <section className=''>
         <Jobs />

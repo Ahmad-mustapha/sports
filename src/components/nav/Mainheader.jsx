@@ -31,7 +31,7 @@ export const SidebarNenu = () =>{
       <ul className='w-full bg-[#19328A] absolute top-[rem] left-0 h-[] flex flex-col justify-start gap-2 text-white z-50'>
             {navLinks.map((link, index) =>(
                 // <li  className=''>
-                    <Link key={index} className='flex items-center gap-1 text-[.94rem] p-4 sidelink'><span className='text-[1.2rem] font-[600]'>{link.icon}</span>{link.text}</Link>
+                <Link key={index} className='flex items-center gap-1 text-[.94rem] p-4 sidelink'><span className='text-[1.2rem] font-[600]'>{link.icon}</span>{link.text}</Link>
                 // </li>
             ))}
         </ul>
@@ -91,7 +91,7 @@ const Mainheader = () => {
   }, [showMenu]);
 
   return (
-    <div className='mainheader border-b-[2px] border-[#ccc]'>
+    <div className='mainheader border-b-[] border-[#ccc]'>
       <div><Link><img src={Logo2} alt="" /></Link></div>
       <ul className='mainheaderNav'>
         <li>
@@ -114,7 +114,7 @@ const Mainheader = () => {
         </li>
       </ul>
       <div className='flex items-center gap-4 login'>
-        <Link className='text-[white] bg-orange-500 font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Login <IoIosArrowRoundForward className='text-[1.4rem] font-[600]'/></Link>
+        <Link className='text-[white] bg-[#19328A] font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Login <IoIosArrowRoundForward className='text-[1.4rem] font-[600]'/></Link>
         <div className='w-12 bg-blue-950 rounded-lg p-2'><Link><img src={Logo3} alt="" /></Link></div>
       </div>
       <div className='menu text-black absolute right-6'>
@@ -128,7 +128,12 @@ const Mainheader = () => {
       { showMenu && (
         <SideheaderMenu showMenu={showMenu}/>
       ) }
-      <Link><FiSearch className='text-orange-500 mr-8 font-[500] text-[1.2rem]'/></Link>
+      {/* <Link><FiSearch className='text-orange-500 mr-8 font-[500] text-[1.2rem]'/></Link> */}
+      <div className='flex items-center gap-[5px] text-white'>
+        <Link className='flex items-center gap-1 hover:underline hover:text-[#19328A] text-[.94rem] p-2'>TennisDirect <HiOutlineShoppingCart className='text-[1.1rem] font-[600]'/></Link>
+        <Link className='flex items-center gap-1 hover:underline hover:text-[#19328A] text-[.94rem] p-2'>My KNLTB<MdOutlinePersonOutline className='text-[1.1rem] font-[600]'/></Link>
+        <Link><FiSearch /></Link>
+      </div>
     </div>
   )
 }

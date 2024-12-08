@@ -1,11 +1,14 @@
 .navbar{
-    @apply h-[5rem] px-14 py-6 bg-gradient-to-r from-[#19328A] to-[#d94b18] flex items-center justify-between relative
+    @apply h-[5rem] px-14 py-6 bg-red-600 flex items-center justify-between relative
 }
 .mainheader{
-    @apply px-14 py-6 text-white h-[4.5rem] bg-white flex items-center justify-between
+    @apply px-14 py-6 text-white h-[4.5rem] bg-green-600 flex items-center justify-between
 }
 .mainheaderNav{
-    @apply flex items-center gap-6 text-black
+    @apply flex items-center gap-6 text-[#ffff]
+}
+.mainheaderNav a{
+    @apply hover:underline hover:text-[#19328A]
 }
 .menu{
     @apply hidden
@@ -14,7 +17,7 @@
     @apply p-4
 }
 .sideheaderNav .sidelink{
-    @apply border-b-[1px] pb-2
+    @apply border-b-[1px] pb-2 text-[#19328A]
 }
 @media screen and (max-width: 1060px) {
     .navbar{

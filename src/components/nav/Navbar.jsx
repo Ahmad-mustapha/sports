@@ -11,14 +11,14 @@ import { FiSearch } from "react-icons/fi";
 import Pickleball from '../../assets/pickleball (1).png'
 import './navbar.css'
 const navLinks = [
-    {text: 'KNLTB', icon: '', link: '/knltb'},
+    // {text: 'KNLTB', icon: '', link: '/knltb'},
     {text: 'Tennis', icon: <BiSolidTennisBall />, link: '/tennis'},
     {text: 'Padel', icon: <GiTennisRacket />, link: '/padel'},
     {text: 'Pickleball', icon: <GiTennisRacket />, link: '/pickleball'},
     {text: 'Associations', icon: '', link: '/association'},
     {text: 'Centers', icon: '', link: '/centers'},
     {text: 'Teachers', icon: '', link: '/teachers'},
-    {text: 'KNLTB TV', icon: <MdLiveTv />, link: '/knltb tv'},
+    // {text: 'KNLTB TV', icon: <MdLiveTv />, link: '/knltb tv'},
 ]
 
 const sports = [
@@ -73,11 +73,11 @@ const Navbar = () => {
         {/* {showMoresports && (
             <Moresports />
         )} */}
-        <div className='flex items-center gap-[5px] text-white'>
+        {/* <div className='flex items-center gap-[5px] text-white'>
             <Link className='flex items-center gap-1 hover text-[.94rem] p-2'>TennisDirect <HiOutlineShoppingCart className='text-[1.1rem] font-[600]'/></Link>
             <Link className='flex items-center gap-1 hover text-[.94rem] p-2'>My KNLTB<MdOutlinePersonOutline className='text-[1.1rem] font-[600]'/></Link>
             <Link><FiSearch /></Link>
-        </div>
+        </div> */}
     </div>
   )
 }

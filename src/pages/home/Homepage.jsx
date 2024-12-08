@@ -4,8 +4,8 @@ import { Navbar, Footer, Header, Mainheader, Hero, Jobs, Latestnews, Usefullinks
 const Homepage = () => {
   return (
     <div className='relative'>
-      <Navbar />
       <Mainheader />
+      <Navbar />
       <Hero />
       <Latestnews />
       <Usefullinks />
