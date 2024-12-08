@@ -21,7 +21,7 @@ import Flevoland from '../../assets/Flevoland.webp'
 import Utrecht from '../../assets/Utrecht.webp'
 import NoordBrabant from '../../assets/NoordBrabant.webp'
 import Zeeland from '../../assets/Zeeland.webp'
-import ZuidHolland from '../../assets/Zuidholland.webp'
+// import ZuidHolland from '../../assets/Zuidholland.webp'
 
 
 
@@ -30,7 +30,7 @@ import ZuidHolland from '../../assets/Zuidholland.webp'
 export function CarouselSize() {
   const jobData = [
     { id: 1, image: NoordHolland, number: "36", name: "Noord-Holland" },
-    { id: 2, image: ZuidHolland, number: "45", name: "Zuld-Holland" },
+    { id: 2, image: Flevoland, number: "45", name: "Zuld-Holland" },
     { id: 3, image: Zeeland, number: "11", name: "Zeeland" },
     { id: 4, image: NoordBrabant, number: "65", name: "Noord-Brabant" },
     { id: 5, image: Utrecht, number: "16", name: "Utrecht" },
