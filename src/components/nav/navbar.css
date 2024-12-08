@@ -1,0 +1,35 @@
+.navbar{
+    @apply h-[5rem] px-14 py-6 bg-gradient-to-r from-[#19328A] to-[#d94b18] flex items-center justify-between relative
+}
+.mainheader{
+    @apply px-14 py-6 text-white h-[4.5rem] bg-white flex items-center justify-between
+}
+.mainheaderNav{
+    @apply flex items-center gap-6 text-black
+}
+.menu{
+    @apply hidden
+}
+.sideheaderNav{
+    @apply p-4
+}
+.sideheaderNav .sidelink{
+    @apply border-b-[1px] pb-2
+}
+@media screen and (max-width: 1060px) {
+    .navbar{
+        @apply hidden
+    }
+    .mainheader{
+        /* @apply hidden */
+    }
+    .mainheaderNav{
+        @apply hidden
+    }
+    .menu{
+        @apply block
+    }
+    .login{
+        @apply hidden
+    }
+}
