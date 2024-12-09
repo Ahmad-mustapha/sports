@@ -37,7 +37,7 @@ function Hero() {
         style={{
           backgroundImage: `url(${images[currentIndex]})`,
         }}
-        className='py-6 px-14 hero-section'>
+        className='py-6 px-8 md:px-14  hero-section'>
           <div><Link className='text-[3.4rem] font-[700] text-white cursor-pointer hero-content'>Search and book now</Link></div>
           <form action="">
             <div className='flex items-center flex-col lg:flex-row gap-8 mt-2 hero-content'>

@@ -8,7 +8,7 @@ const Latestnews = () => {
     setSelectedLatestNews(sport);
   };
   return (
-    <div className='py-6 px-14'>
+    <div className='py-6 px-8 md:px-14 '>
         <div className="flex items-center justify-between mb-8">
           <p className="font-[500] text-[2rem]">Latest News</p>
           <span className='flex items-center'>

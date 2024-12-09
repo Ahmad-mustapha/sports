@@ -1,8 +1,8 @@
 .navbar{
-    @apply h-[5rem] px-14 py-6 bg-red-600 flex items-center justify-between relative
+    @apply h-[5rem] px-8 md:px-14  py-6 bg-red-600 flex items-center justify-between relative
 }
 .mainheader{
-    @apply px-14 py-6 text-white h-[4.5rem] bg-green-600 flex items-center justify-between
+    @apply px-8 md:px-14 py-6 text-white h-[4.5rem] bg-green-600 flex items-center justify-between
 }
 .mainheaderNav{
     @apply flex items-center gap-6 text-[#ffff]
