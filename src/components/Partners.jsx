@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 const Partners = () => {
   return (
-    <div className='py-6 px-8 md:px-14  mt-2'>
+    <div className='py-6 px-8 md:px-14 mt-2'>
       <p className="font-[600] text-[1.2rem]">Partners of the KNLTB</p>
       <div className='flex items-center gap-8 mt-6'>
         <div className='w-[2rem] md:w-[3rem]'><Link><img className='w-full' src={Tennis} alt="" /></Link></div>

@@ -95,7 +95,7 @@ export const SportsCarousel = ({ selectedSport }) => {
         opts={{ align: "start" }}
         className="w-full"
       >
-        <CarouselContent>
+        <CarouselContent className=''>
           {carouselData.map(({ id, title, description, image, date, meter, price, actnum }) => (
             <CarouselItem key={id} className="sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
                 <Card className="relative bg-white lg:h-[68vh]">

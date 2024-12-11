@@ -37,7 +37,7 @@ function Hero() {
         style={{
           backgroundImage: `url(${images[currentIndex]})`,
         }}
-        className='py-6 px-8 md:px-14  hero-section'>
+        className='py-6 px-8 md:px-14 hero-section'>
           <div><Link className='text-[3.4rem] font-[700] text-white cursor-pointer hero-content'>Search and book now</Link></div>
           <form action="">
             <div className='flex items-center flex-col lg:flex-row gap-8 mt-2 hero-content'>
@@ -100,11 +100,11 @@ function Hero() {
       <section className=''>
         <Jobs />
       </section>
-      <section className='bg-[#f5f5f5] px-14 py-6 overflow-x-hidden mt-10'>
+      <section className='bg-[#f5f5f5] px-14 py-6 overflow-x-hidden'>
         <div className="">
-          <p className="font-[500] text-[2rem]">Available activities from Saturday 7 December </p>
+          <p className="font-[500] text-[1.5rem] lg:text-[2rem]">Available activities from Saturday 7 December </p>
         </div>
-        <div className="mt-8">
+        <div className="mt-8 flex items-center justify-center">
           <SportsCarousel selectedSport={selectedSport}/>
         </div>
       </section>

@@ -92,30 +92,36 @@ const Mainheader = () => {
 
   return (
     <div className='mainheader border-b-[] border-[#ccc]'>
-      <div><Link><img src={Logo2} alt="" /></Link></div>
-      <ul className='mainheaderNav'>
-        <li>
-            <Link>Explanation</Link>
-        </li>
-        <li>
-            <Link>Discover</Link>
-        </li>
-        <li>
-            <Link>To play</Link>
-        </li>
-        <li>
-            <Link>Download</Link>
-        </li>
-        <li>
-            <Link>Gift card</Link>
-        </li>
-        <li>
-            <Link>News</Link>
-        </li>
-      </ul>
+      <div className='flex items-center md:gap-2 xl:gap-10'>
+        <div className='mr-6'><Link><img src={Logo2} alt="" /></Link></div>
+        <ul className='mainheaderNav'>
+          <li>
+              <Link>Explanation</Link>
+          </li>
+          <li>
+              <Link>Discover</Link>
+          </li>
+          <li>
+              <Link>To play</Link>
+          </li>
+          <li>
+              <Link>Download</Link>
+          </li>
+          <li>
+              <Link>Gift card</Link>
+          </li>
+          <li>
+              <Link>News</Link>
+          </li>
+        </ul>
+      </div>
       <div className='flex items-center gap-4 login'>
-        <Link className='text-[white] bg-[#19328A] font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Login <IoIosArrowRoundForward className='text-[1.4rem] font-[600]'/></Link>
         <div className='w-12 bg-blue-950 rounded-lg p-2'><Link><img src={Logo3} alt="" /></Link></div>
+        <div className='flex items-center gap-[5px] text-white'>
+        <Link className='text-[white] bg-[#19328A] font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Sign Up</Link>
+        <Link className='flex items-center gap-1 hover:underline hover:text-[#19328A] text-[.94rem] p-2'><MdOutlinePersonOutline className='text-[1.1rem] font-[600]'/></Link>
+        <Link><FiSearch /></Link>
+      </div>
       </div>
       <div className='menu text-black absolute right-6'>
         {showMenu ? <RxCross1 
@@ -129,11 +135,6 @@ const Mainheader = () => {
         <SideheaderMenu showMenu={showMenu}/>
       ) }
       {/* <Link><FiSearch className='text-orange-500 mr-8 font-[500] text-[1.2rem]'/></Link> */}
-      <div className='flex items-center gap-[5px] text-white'>
-        <Link className='flex items-center gap-1 hover:underline hover:text-[#19328A] text-[.94rem] p-2'>TennisDirect <HiOutlineShoppingCart className='text-[1.1rem] font-[600]'/></Link>
-        <Link className='flex items-center gap-1 hover:underline hover:text-[#19328A] text-[.94rem] p-2'>My KNLTB<MdOutlinePersonOutline className='text-[1.1rem] font-[600]'/></Link>
-        <Link><FiSearch /></Link>
-      </div>
     </div>
   )
 }
