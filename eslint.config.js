@@ -33,6 +33,20 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      // Suppress React import warnings
+      'react/react-in-jsx-scope': 'off',
+      'react/jsx-uses-react': 'off',
+      // Handle unused imports
+      'no-unused-vars': [
+        'warn',
+        {
+          vars: 'all',
+          varsIgnorePattern: '^React$', // Ignore unused React imports
+          args: 'after-used',
+          ignoreRestSiblings: true,
+        },
+      ],
+
     },
   },
 ]

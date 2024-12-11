@@ -125,10 +125,10 @@ const Mainheader = () => {
       </div>
       <div className='menu text-black absolute right-6'>
         {showMenu ? <RxCross1 
-        onClick={(e) => setShowMenu(false)}
+        onClick={() => setShowMenu(false)}
         className='text-[2rem] cursor-pointer'/>: 
         <IoMenuOutline 
-        onClick={(e) => setShowMenu(true)}
+        onClick={() => setShowMenu(true)}
         className='text-[1.9rem] cursor-pointer'/>}
       </div>
       { showMenu && (

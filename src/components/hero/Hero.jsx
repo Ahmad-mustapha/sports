@@ -4,8 +4,6 @@ import Firstimage from '../../assets/sporthero2.webp'
 import secimage from '../../assets/sporthero3.webp'
 import { FiSearch } from "react-icons/fi";
 import { Link } from 'react-router-dom';
-import { IoMdTennisball } from "react-icons/io";
-import { FaHome } from "react-icons/fa";
 import Jobs from '../jobs/Jobs';
 import { SportsCarousel } from '../availableactivites/Sportcarousel';
 
@@ -19,9 +17,9 @@ function Hero() {
   const [ selectedSport, setSelectedSport, ] = useState('tennis')
   // console.log(selectedSport);
 
-  const handleSportChange = (sport) => {
-    setSelectedSport(sport);
-  };
+  // const handleSportChange = (sport) => {
+  //   setSelectedSport(sport);
+  // };
 
   useEffect(() => {
     const interval = setInterval(() => {

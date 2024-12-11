@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { Card, CardContent } from "@/components/ui/Card";
@@ -96,4 +97,10 @@ export const Latestnewscarousel = ({ selectedLatestNews }) => {
       </Carousel>
     </div>
   );
+};
+
+
+// PropTypes validation for selectedLatestNews prop
+Latestnewscarousel.propTypes = {
+  selectedLatestNews: PropTypes.string.isRequired,
 };

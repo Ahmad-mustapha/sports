@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Footer, Header, Mainheader, Hero, Jobs, Latestnews, Usefullinks, Partners} from '../../components/index'
+import { Navbar, Footer, Mainheader, Hero, Latestnews, Usefullinks, Partners} from '../../components/index'
 
 const Homepage = () => {
   return (

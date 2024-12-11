@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Logo from '../../assets/sportlogo.png'
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { MdKeyboardArrowUp } from "react-icons/md";
 import { Dropdown } from '../../utils/dropdowns/Dropdowns';
 
 const dropDowndata = {

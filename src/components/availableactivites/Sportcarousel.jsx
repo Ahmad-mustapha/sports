@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { IoIosArrowRoundForward } from "react-icons/io";
 import { Card, CardContent } from "@/components/ui/Card";
 import Activity1 from '../../assets/activity1.jpeg'
 import Activity2 from '../../assets/activity2.jpeg'
@@ -14,6 +13,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel.jsx";
+import PropTypes from "prop-types";
 
 const availableSportsData = {
   tennis: [
@@ -131,3 +131,7 @@ export const SportsCarousel = ({ selectedSport }) => {
     </div>
   );
 };
+
+SportsCarousel.propTypes = {
+  selectedSport : PropTypes.string.isRequired
+}

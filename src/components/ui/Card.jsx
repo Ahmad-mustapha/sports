@@ -1,6 +1,6 @@
 // src/components/ui/card.jsx
+import PropTypes from "prop-types";
 import React from "react";
-import Holland from '../../assets/Noordholland.webp'
 
 export const Card = ({ children, className }) => {
   return (
@@ -17,6 +17,16 @@ export const CardContent = ({ children, className }) => {
     </div>
   );
 };
+
+Card.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string.isRequired
+}
+
+CardContent.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string.isRequired
+}
 
 
 // export const Tenniscard = () =>{

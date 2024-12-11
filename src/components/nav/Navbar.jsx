@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { GiTennisRacket } from "react-icons/gi";
-import { HiOutlineShoppingCart } from "react-icons/hi";
-import { MdOutlinePersonOutline } from "react-icons/md";
-import { GiTeacher } from "react-icons/gi";
-import { MdLiveTv } from "react-icons/md";
+// import { HiOutlineShoppingCart } from "react-icons/hi";
+// import { MdOutlinePersonOutline } from "react-icons/md";
+// import { GiTeacher } from "react-icons/gi";
+// import { MdLiveTv } from "react-icons/md";
 import { BiSolidTennisBall } from "react-icons/bi";
-import { IoIosArrowDown } from "react-icons/io";
-import { FiSearch } from "react-icons/fi";
-import Pickleball from '../../assets/pickleball (1).png'
+// import { IoIosArrowDown } from "react-icons/io";
+// import { FiSearch } from "react-icons/fi";
+// import Pickleball from '../../assets/pickleball (1).png'
 import './navbar.css'
 const navLinks = [
     // {text: 'KNLTB', icon: '', link: '/knltb'},
@@ -57,7 +57,7 @@ const sports = [
 
 
 const Navbar = () => {
-    const [ showMoresports, setShowMoreSport ] = useState(false)
+    // const [ showMoresports, setShowMoreSport ] = useState(false)
   return (
     <div className='navbar'>
         <ul className='flex items-center gap-[5px] text-white'>

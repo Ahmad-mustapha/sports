@@ -13,11 +13,11 @@ const Latestnews = () => {
           <p className="font-[500] text-[2rem]">Latest News</p>
           <span className='flex items-center'>
             <button 
-            onClick={(e) => handlelatestNews('tennis')}
+            onClick={() => handlelatestNews('tennis')}
             className={`border-[1px] border-[#d94b18] p-1 px-2 text-[.8rem] text-[#d94b18] rounded-[20px] 
             ${selectedLatestNews === 'tennis' ? 'bg-orange-500 text-white': ''}`}>Tennis</button>
             <button 
-            onClick={(e) => handlelatestNews('padel')}
+            onClick={() => handlelatestNews('padel')}
             className={`border-[1px] border-[#d94b18] p-1 px-2 text-[.8rem] text-[#d94b18] rounded-[20px] 
               ${selectedLatestNews === 'padel' ? 'bg-orange-500 text-white': ''}`}>Padel</button>
           </span>
