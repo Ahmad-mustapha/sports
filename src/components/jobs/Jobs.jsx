@@ -106,13 +106,13 @@ export function CarouselSize() {
 
 const Jobs = () => {
   return (
-    <div className="flex items-center justify-center min-h bg-[#f5f5f5] px-14 py-6 overflow-x-hidden">
+    <div className="flex items-center justify-center min-h bg-[#f5f5f5] px-8 md:px-14 py-6 overflow-x-hidden">
       <div className="w-full max-w-[1200px]">
-        <div className="flex items-center justify-between mb-6">
-          <p className="font-[500] text-[1.5rem] lg:text-[2rem]">
+        <div className="flex items-center justify-between flex-wrap mb-6">
+          <p className="font-[600] text-[1.3rem] text-left md:text-[2rem]">
             Find and book a job in your province
           </p>
-          <Link className="text-orange-500 font-[500]">View all</Link>
+          <Link to='/contact' className="text-orange-500 font-[500]">View all</Link>
         </div>
         <CarouselSize />
       </div>

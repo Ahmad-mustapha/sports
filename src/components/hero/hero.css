@@ -36,8 +36,7 @@
     color: inherit;
   }
 .buttons{
-    @apply border-[1px] border-[#d94b18] p-1 px-2 text-[.8rem] bg-white text-[#d94b18] rounded-[20px]
+    @apply flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px]
 }
 
-  
 

@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import './hero.css'
+import { IoMdTennisball } from 'react-icons/io'
+import { GiTennisRacket } from "react-icons/gi";
+import { MdOutlineSportsBaseball } from 'react-icons/md';
+import { FaBasketball } from 'react-icons/fa6';
+import { IoMdFootball } from 'react-icons/io';
+// import { FaHome } from 'react-icons/fa'
 import Firstimage from '../../assets/sporthero2.webp'
 import secimage from '../../assets/sporthero3.webp'
 import { FiSearch } from "react-icons/fi";
@@ -36,7 +42,40 @@ function Hero() {
           backgroundImage: `url(${images[currentIndex]})`,
         }}
         className='py-6 px-8 md:px-14 hero-section'>
-          <div><Link className='text-[3.4rem] font-[700] text-white cursor-pointer hero-content'>Search and book now</Link></div>
+          <div><Link className='text-[2.8rem] md:text-[3.4rem] font-[700] text-white cursor-pointer hero-content'>Search and book now</Link></div>
+          {/* <div className='flex items-center flex-wrap justify-center md:justify-start md:flex-nowrap gap-1'> */}
+              <div className='flex items-center justify-center sm:justify-start flex-wrap gap-2 hero-content my-6'>
+                <button 
+                  onClick={() =>('tennis')}
+                  className='buttons'><IoMdTennisball className='text-[#d94b18] text-[1.2rem]'/> Tennis</button>
+                  <button
+                  onClick={() =>('padel')} 
+                  className='buttons'><GiTennisRacket className='text-[#d94b18] text-[1.2rem]'/> Padel</button>
+                  <button
+                  onClick={() =>('squash')} 
+                  className='buttons'><MdOutlineSportsBaseball className='text-[#d94b18] text-[1.2rem]'/> Squash</button>
+                  <button
+                  onClick={() =>('pickleball')} 
+                  className='buttons'><GiTennisRacket className='text-[#d94b18] text-[1.2rem]'/>Pickleball</button>
+                  <button
+                  onClick={() =>('squash')} 
+                  className='buttons'><IoMdFootball className='text-[#d94b18] text-[1.2rem]'/> Football</button>
+                  <button
+                  onClick={() =>('pickleball')} 
+                  className='buttons'><FaBasketball className='text-[#d94b18] text-[1.2rem]'/> Basketball</button>
+                </div>
+              {/* <div className='flex items-center flex-wrap gap-1'>
+                  <span className='flex items-center gap-1'
+                  onClick={() =>('inAndOut')}lassName='flex items-center gap-1'><FaHome className='text-[#d94b18] text-[1.4rem]'/><button 
+                  className='buttons'> Indoor and outdoor</button></span>
+                  <button
+                  onClick={() =>('indoor')} 
+                  className='buttons'>Indoor</button>
+                  <button
+                  onClick={() =>('outdoor')} 
+                  className='buttons'>Outdoor</button>
+              </div> */}
+          {/* </div> */}
           <form action="">
             <div className='flex items-center flex-col lg:flex-row gap-8 mt-2 hero-content'>
                 <div className='w-full lg:w-[350px]'>
@@ -67,38 +106,11 @@ function Hero() {
                 </div>
             </div>
           </form>
-          {/* <div className='flex items-center flex-wrap justify-center md:justify-start md:flex-nowrap gap-1 hero-content mt-4'>
-              <div className='flex items-center flex-wrap gap-1'>
-                <span className='flex items-center gap-1'><IoMdTennisball className='text-[#d94b18] text-[1.4rem]'/><button 
-                  onClick={(e) =>handleSportChange('tennis')}
-                  className='buttons'> Tennis</button></span>
-                  <button
-                  onClick={(e) =>handleSportChange('padel')} 
-                  className='buttons'>Padel</button>
-                  <button
-                  onClick={(e) =>handleSportChange('squash')} 
-                  className='buttons'>Squash</button>
-                  <button
-                  onClick={(e) =>handleSportChange('pickleball')} 
-                  className='buttons'>Pickleball</button>
-                </div>
-              <div className='flex items-center flex-wrap gap-1'>
-                  <span className='flex items-center gap-1'
-                  onClick={(e) =>handleSportChange('inAndOut')}lassName='flex items-center gap-1'><FaHome className='text-[#d94b18] text-[1.4rem]'/><button 
-                  className='buttons'> Indoor and outdoor</button></span>
-                  <button
-                  onClick={(e) =>handleSportChange('indoor')} 
-                  className='buttons'>Indoor</button>
-                  <button
-                  onClick={(e) =>handleSportChange('outdoor')} 
-                  className='buttons'>Outdoor</button>
-              </div>
-          </div> */}
       </div>
       <section className=''>
         <Jobs />
       </section>
-      <section className='bg-[#f5f5f5] px-14 py-6 overflow-x-hidden'>
+      <section className='bg-[#f5f5f5] px-8 md:px-14  py-6 overflow-x-hidden'>
         <div className="">
           <p className="font-[500] text-[1.5rem] lg:text-[2rem]">Available activities from Saturday 7 December </p>
         </div>

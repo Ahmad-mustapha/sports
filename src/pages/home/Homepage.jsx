@@ -5,7 +5,7 @@ const Homepage = () => {
   return (
     <div className='relative'>
       <Mainheader />
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <Latestnews />
       <Usefullinks />

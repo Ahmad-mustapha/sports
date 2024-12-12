@@ -5,6 +5,7 @@ import { RxCross1 } from "react-icons/rx";
 import { IoMenuOutline } from "react-icons/io5";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { MdOutlinePersonOutline } from "react-icons/md";
+import { TbWorld } from 'react-icons/tb';
 import Logo2 from '../../assets/sportlogo2.svg'
 import Logo3 from '../../assets/knltbid_logo.png'
 import { FiSearch } from 'react-icons/fi';
@@ -120,6 +121,7 @@ const Mainheader = () => {
         <div className='flex items-center gap-[5px] text-white'>
         <Link className='text-[white] bg-[#19328A] font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Sign Up</Link>
         <Link className='flex items-center gap-1 hover:underline hover:text-[#19328A] text-[.94rem] p-2'><MdOutlinePersonOutline className='text-[1.1rem] font-[600]'/></Link>
+        <TbWorld />
         <Link><FiSearch /></Link>
       </div>
       </div>

@@ -33,7 +33,7 @@ const lastestNewsdata = {
 
 export const Latestnewscarousel = ({ selectedLatestNews }) => {
   const carouselNewsData = lastestNewsdata[selectedLatestNews];
-  console.log(carouselNewsData);
+  // console.log(carouselNewsData);
   
   
   const [visibleSlides, setVisibleSlides] = useState(4); // Default visible slides
