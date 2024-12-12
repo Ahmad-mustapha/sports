@@ -98,7 +98,7 @@ export const SportsCarousel = ({ selectedSport }) => {
         <CarouselContent className=''>
           {carouselData.map(({ id, title, description, image, date, meter, price, actnum }) => (
             <CarouselItem key={id} className="sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <Card className="relative bg-white lg:h-[68vh]">
+                <Card className="relative bg-white lg:h-[400px]">
                     <div className="absolute right-0 top-0 bg-orange-600 px-4 py-2 rounded-bl-md">
                         <p className="text-white text-[1.5rem] font-[500]">{meter}</p>
                         <p className="text-[#fdfdfd] text-[.9rem] font-[500]">KM</p>
@@ -110,7 +110,7 @@ export const SportsCarousel = ({ selectedSport }) => {
                         alt={title}
                     />
                     </div>
-                    <CardContent className="flex flex-col justify-between h-[30vh]">
+                    <CardContent className="flex flex-col justify-between h-[200px]">
                         <div>
                             <p className="text-[1.4rem] lg:text-[1.7rem] text-white absolute left-3 top-[10.5rem] font-[500]">{title}</p>
                             <p className="text-[1rem] font-[500] mt-4">{description}</p>

@@ -72,15 +72,15 @@ export const Latestnewscarousel = ({ selectedLatestNews }) => {
         <CarouselContent>
           {carouselNewsData.map(({ id, title, description, image, date}) => (
             <CarouselItem key={id} className="sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <Card className="relative bg-white lg:h-[74vh]">
-                    <div className="h-[35vh]">
+                <Card className="relative bg-white lg:h-[430px]">
+                    <div className="h-[200px]">
                         <img
                             className="w-full h-full object-cover"
                             src={image || 'Paceholde'}
                             alt={title}
                         />
                     </div>
-                    <CardContent className="flex flex-col h-[40vh]">
+                    <CardContent className="flex flex-col h-[230px]">
                         <div>
                             <p className="text-[.8rem] text-[#999] mt-2">{date}</p>
                             <p className="text-[1.2rem] lg:text-[1.2rem] font-[500]">{title}</p>
