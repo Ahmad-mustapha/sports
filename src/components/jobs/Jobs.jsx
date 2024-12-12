@@ -112,7 +112,7 @@ const Jobs = () => {
           <p className="font-[600] text-[1.3rem] text-left md:text-[2rem]">
             Find and book a job in your province
           </p>
-          <Link to='/contact' className="text-orange-500 font-[500]">View all</Link>
+          <Link to='/clubs' className="text-orange-500 font-[500]">View all</Link>
         </div>
         <CarouselSize />
       </div>
