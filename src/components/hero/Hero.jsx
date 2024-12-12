@@ -110,7 +110,7 @@ function Hero() {
       <section className=''>
         <Jobs />
       </section>
-      <section className='bg-[#f5f5f5] px-8 md:px-14  py-6 overflow-x-hidden'>
+      <section className='bg-[#f5f5f5] px-8 md:px-14 py-6 overflow-x-hidden'>
         <div className="">
           <p className="font-[500] text-[1.5rem] lg:text-[2rem]">Available activities from Saturday 7 December </p>
         </div>
