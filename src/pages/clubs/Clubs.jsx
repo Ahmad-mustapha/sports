@@ -84,11 +84,11 @@ const CLubs = () => {
                 </div>
             </section>
         </section>
-        <section className="flex flex-wrap sm:flex-nowrap h-[65vh]">
-            <section className="bg-[#eeeeee] p-4 w-full sm:w-3/6 h-[65vh] overflow-y-scroll">
+        <section className="flex items-center flex-wrap sm:flex-nowrap">
+            <section className="bg-[#eeeeee] p-4 w-full sm:w-3/6 h-[400px] overflow-y-scroll">
                 <Location />
             </section>
-            <section className="w-full sm:w-3/6 h-full">
+            <section className="w-full sm:w-3/6 h-[400px] ">
                 <img src={Map} alt="" className="w-full h-full"/>
             </section>
         </section>
