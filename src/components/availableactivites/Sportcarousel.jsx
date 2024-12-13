@@ -89,7 +89,7 @@ export const SportsCarousel = ({ selectedSport }) => {
   }, []);
 
   return (
-    <div>
+    <div className="">
       <Carousel
         visibleSlides={visibleSlides} // Dynamically set visible slides
         opts={{ align: "start" }}

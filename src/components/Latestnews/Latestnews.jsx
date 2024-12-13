@@ -8,9 +8,9 @@ const Latestnews = () => {
     setSelectedLatestNews(sport);
   };
   return (
-    <div className='py-6 px-8 md:px-14 '>
-        <div className="flex items-center justify-between mb-8">
-          <p className="font-[500] text-[2rem]">Latest News</p>
+    <div className='py-6 px-8 md:px-14'>
+        <div className="lg:flex lg:items-center lg:justify-between xl:justify-center flex justify-between mb-8">
+          <p className="font-[500] text-[1.5rem] lg:text-[2rem]">Most recent news</p>
           <span className='flex items-center'>
             <button 
             onClick={() => handlelatestNews('tennis')}
@@ -22,7 +22,7 @@ const Latestnews = () => {
               ${selectedLatestNews === 'padel' ? 'bg-orange-500 text-white': ''}`}>Padel</button>
           </span>
         </div>
-        <section>
+        <section className='sm:flex sm:items-center sm:justify-center'>
           <Latestnewscarousel selectedLatestNews={selectedLatestNews}/>
         </section>
     </div>
