@@ -17,7 +17,7 @@
     @apply p-4
 }
 .sideheaderNav .sidelink{
-    @apply border-b-[1px] pb-2 text-[#19328A]
+    @apply border-b-[1px] pb-2 text-[#]
 }
 @media screen and (max-width: 1060px) {
     .navbar{
@@ -35,4 +35,10 @@
     .login{
         @apply hidden
     }
+}
+.media{
+    transition: all .3s ease-in-out;
+}
+.media:hover{
+    transform: rotate(360deg);
 }

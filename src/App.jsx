@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 // import Homepage from './pages/home/Homepage'
-import { Homepage, Clubs } from './pages/index'
+import { Homepage, Clubs, Clubdetails } from './pages/index'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Homepage />}/>
           <Route path='/clubs' element={<Clubs />}/>
+          <Route path='/clubs/:id' element={<Clubdetails />}/>
         </Routes>
       </BrowserRouter>
     </>

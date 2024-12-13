@@ -114,7 +114,7 @@ function Hero() {
         <div className="">
           <p className="font-[500] text-[1.5rem] lg:text-[2rem]">Available activities from Saturday 7 December </p>
         </div>
-        <div className="mt-8 flex items-center justify-center">
+        <div className="mt-8">
           <SportsCarousel selectedSport={selectedSport}/>
         </div>
       </section>

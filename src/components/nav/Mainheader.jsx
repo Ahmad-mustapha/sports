@@ -23,7 +23,7 @@ const navLinks = [
   {text: 'Associations', icon: '', link: '/association'},
   {text: 'Centers', icon: '', link: '/centers'},
   {text: 'Teachers', icon: '', link: '/teachers'},
-  {text: 'KNLTB TV', icon: <MdLiveTv />, link: '/knltb tv'},
+  // {text: 'KNLTB TV', icon: <MdLiveTv />, link: '/knltb tv'},
 ]
 
 export const SidebarNenu = () =>{
@@ -48,7 +48,7 @@ export const SideheaderMenu = () =>{
   return(
     <div>
       <ul className='sideheaderNav w-full bg-white fixed top-[4.5rem] left-0 h-screen flex flex-col justify-start gap-6 text-black z-40 overflow-y-scroll'>
-        <div onClick={handleSidebar} className='flex cursor-pointer items-center justify-between bg-[#19328A] px-2 py-4 text-white -mt-4 -mx-4 -mb-6 border-b-[1px] border-[#bbb]'>
+        {/* <div onClick={handleSidebar} className='flex cursor-pointer items-center justify-between bg-[#19328A] px-2 py-4 text-white -mt-4 -mx-4 -mb-6 border-b-[1px] border-[#bbb]'>
           <p className='font-[700] text-[1rem]'>KNLTB Meet & Play</p>
           <IoIosArrowDown className='cursor-pointer' onClick={handleSidebar}/>
         </div>
@@ -56,18 +56,16 @@ export const SideheaderMenu = () =>{
           showSidebar && (
             <SidebarNenu />
           )
-        }
+        } */}
         <Link className='hover:underline hover:text-orange-500 sidelink'>Explanation</Link>
         <Link className='hover:underline hover:text-orange-500 sidelink'>Discover</Link>
         <Link className='hover:underline hover:text-orange-500 sidelink'>To play</Link>
         <Link className='hover:underline hover:text-orange-500 sidelink'>Download</Link>
         <Link className='hover:underline hover:text-orange-500 sidelink'>Gift card</Link>
         <Link className='hover:underline hover:text-orange-500 sidelink'>News</Link>
-        <Link className='flex items-center gap-1 hover text-[.94rem] sidelink'>My KNLTB<MdOutlinePersonOutline className='text-[1.1rem] font-[600]'/></Link>
-        <Link className='flex items-center gap-1 hover text-[.94rem] sidelink'>TennisDirect <HiOutlineShoppingCart className='text-[1.1rem] font-[600]'/></Link>
         <div className='mb-20 flex items-center justify-end gap-4'>
-          <Link className='text-[white] bg-orange-500 font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Login <IoIosArrowRoundForward className='text-[1.4rem] font-[600]'/></Link>
-          <div className='w-12 bg-blue-950 rounded-lg p-2'><Link><img src={Logo3} alt="" /></Link></div>
+          <Link className='text-white bg-[#193291] font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Sign Up <IoIosArrowRoundForward className='text-[1.4rem] font-[600]'/></Link>
+          {/* <div className='w-12 bg-blue-950 rounded-lg p-2'><Link><img src={Logo3} alt="" /></Link></div> */}
         </div>
       </ul>
     </div>
@@ -117,12 +115,12 @@ const Mainheader = () => {
         </ul>
       </div>
       <div className='flex items-center gap-4 login'>
-        <div className='w-12 bg-blue-950 rounded-lg p-2'><Link><img src={Logo3} alt="" /></Link></div>
+        {/* <div className='w-12 bg-blue-950 rounded-lg p-2'><Link><img src={Logo3} alt="" /></Link></div> */}
         <div className='flex items-center gap-[5px] text-white'>
         <Link className='text-[white] bg-[#19328A] font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Sign Up</Link>
-        <Link className='flex items-center gap-1 hover:underline hover:text-[#19328A] text-[.94rem] p-2'><MdOutlinePersonOutline className='text-[1.1rem] font-[600]'/></Link>
-        <TbWorld />
-        <Link><FiSearch /></Link>
+        <span className='shadow-xl border-[1px] border-[#aaa] rounded-full p-[.4rem] '> <TbWorld  className='text-[1.5rem] font-[600] media'/></span>
+        <Link className='shadow-xl border-[1px] border-[#aaa] rounded-full p-[.4rem] '><FiSearch  className='text-[1.3rem] font-[600] media'/></Link>
+        <Link className='shadow-xl border-[1px] border-[#aaa] rounded-full p-[.4rem] '><MdOutlinePersonOutline className='text-[1.5rem] font-[600] media'/></Link>
       </div>
       </div>
       <div className='menu text-black absolute right-6'>
