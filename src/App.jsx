@@ -1,6 +1,5 @@
 import React from 'react'
 import './App.css'
-// import Homepage from './pages/home/Homepage'
 import { Homepage, Clubs, Clubdetails } from './pages/index'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 

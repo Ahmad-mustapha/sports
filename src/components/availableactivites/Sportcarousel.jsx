@@ -112,7 +112,6 @@ export const SportsCarousel = ({ selectedSport }) => {
                     </div>
                     <CardContent className="flex flex-col justify-between h-[230px]">
                         <div>
-                            {/* <p className="text-[1.4rem] lg:text-[1.7rem] text-white absolute left-3 top-[10.5rem] font-[500]">{title}</p> */}
                             <p className="text-[1rem] font-[500] mt-4">{description}</p>
                             <p className="text-[#777] text-[.85rem]">{date} {price}</p>
                         </div>

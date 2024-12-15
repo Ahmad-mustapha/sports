@@ -21,10 +21,6 @@ import Flevoland from '../../assets/Flevoland.webp'
 import Utrecht from '../../assets/Utrecht.webp'
 import NoordBrabant from '../../assets/NoordBrabant.webp'
 import Zeeland from '../../assets/Zeeland.webp'
-// import ZuidHolland from '../../assets/Zuidholland.webp'
-
-
-
 
 
 export function CarouselSize() {

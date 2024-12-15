@@ -43,39 +43,26 @@ function Hero() {
         }}
         className='py-6 px-8 md:px-14 hero-section'>
           <div><Link className='text-[2.8rem] md:text-[3.4rem] font-[700] text-white cursor-pointer hero-content'>Search and book now</Link></div>
-          {/* <div className='flex items-center flex-wrap justify-center md:justify-start md:flex-nowrap gap-1'> */}
-              <div className='flex items-center justify-center sm:justify-start flex-wrap gap-2 hero-content my-6'>
-                <button 
-                  onClick={() =>('tennis')}
-                  className='buttons'><IoMdTennisball className='text-[#d94b18] text-[1.2rem]'/> Tennis</button>
-                  <button
-                  onClick={() =>('padel')} 
-                  className='buttons'><GiTennisRacket className='text-[#d94b18] text-[1.2rem]'/> Padel</button>
-                  <button
-                  onClick={() =>('squash')} 
-                  className='buttons'><MdOutlineSportsBaseball className='text-[#d94b18] text-[1.2rem]'/> Squash</button>
-                  <button
-                  onClick={() =>('pickleball')} 
-                  className='buttons'><GiTennisRacket className='text-[#d94b18] text-[1.2rem]'/>Pickleball</button>
-                  <button
-                  onClick={() =>('squash')} 
-                  className='buttons'><IoMdFootball className='text-[#d94b18] text-[1.2rem]'/> Football</button>
-                  <button
-                  onClick={() =>('pickleball')} 
-                  className='buttons'><FaBasketball className='text-[#d94b18] text-[1.2rem]'/> Basketball</button>
-                </div>
-              {/* <div className='flex items-center flex-wrap gap-1'>
-                  <span className='flex items-center gap-1'
-                  onClick={() =>('inAndOut')}lassName='flex items-center gap-1'><FaHome className='text-[#d94b18] text-[1.4rem]'/><button 
-                  className='buttons'> Indoor and outdoor</button></span>
-                  <button
-                  onClick={() =>('indoor')} 
-                  className='buttons'>Indoor</button>
-                  <button
-                  onClick={() =>('outdoor')} 
-                  className='buttons'>Outdoor</button>
-              </div> */}
-          {/* </div> */}
+            <div className='flex items-center justify-center sm:justify-start flex-wrap gap-2 hero-content my-6'>
+              <button 
+                onClick={() =>('tennis')}
+                className='buttons'><IoMdTennisball className='text-[#d94b18] text-[1.2rem]'/> Tennis</button>
+                <button
+                onClick={() =>('padel')} 
+                className='buttons'><GiTennisRacket className='text-[#d94b18] text-[1.2rem]'/> Padel</button>
+                <button
+                onClick={() =>('squash')} 
+                className='buttons'><MdOutlineSportsBaseball className='text-[#d94b18] text-[1.2rem]'/> Squash</button>
+                <button
+                onClick={() =>('pickleball')} 
+                className='buttons'><GiTennisRacket className='text-[#d94b18] text-[1.2rem]'/>Pickleball</button>
+                <button
+                onClick={() =>('squash')} 
+                className='buttons'><IoMdFootball className='text-[#d94b18] text-[1.2rem]'/> Football</button>
+                <button
+                onClick={() =>('pickleball')} 
+                className='buttons'><FaBasketball className='text-[#d94b18] text-[1.2rem]'/> Basketball</button>
+            </div>
           <form action="">
             <div className='flex items-center flex-col lg:flex-row gap-8 mt-2 hero-content'>
                 <div className='w-full lg:w-[350px]'>
