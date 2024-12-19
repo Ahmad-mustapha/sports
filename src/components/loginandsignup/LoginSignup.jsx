@@ -40,7 +40,7 @@ const LoginSignup = ({ showSignup, setShowSignup }) => {
       <div className={showSignup ? 'overlay' : ''}
         onClick={() => setShowSignup(false)}
         ></div>
-      <div className="bg-white text-black rounded-xl relative w-[470px] md:w-[600px] explore h-[85vh] overflow-y-scroll scroll overflow-x-hidden">
+      <div className="bg-white text-black rounded-xl relative w-[470px] md:w-[600px] explore h-[] overflow-y-scroll scroll overflow-x-hidden">
         <div className="fixed bg-white z-50 w-[470px] md:w-[600px] flex items-center justify-between mb-4 border-b-[1px] p-4 py-2 border rounded-t-xl">
           <button onClick={() => setShowSignup(false)}  className="text-[2rem]">&times;</button>
           <p className="text-[1rem] font-[600]">Log in or Sign up</p>
