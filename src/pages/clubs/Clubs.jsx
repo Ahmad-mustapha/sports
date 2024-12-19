@@ -9,7 +9,7 @@ const CLubs = () => {
   return (
     <div>
       <Mainheader />
-      <main className="py-6 px-8 md:px-14">
+      <main className="py-6 px-4 md:px-10">
         <section className=" text-[#4c535a] bg-[#193291] rounded-t-md p-6">
             <section className="flex items-center justify-center sm:justify-start gap-6 flex-wrap">
                 <div className="w-full sm:w-[220px]">

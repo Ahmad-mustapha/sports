@@ -1,14 +1,63 @@
 import { Mainheader } from '../../components'
+import { useLocation, useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import Dummymap from '../../assets/dummymap.png'
+import { useState } from 'react'
+import { Usefullinks, Footer, Partners } from '../../components'
+
+
+
+const jobsDataSixtyminutes = [
+    {id:1, date: '16', month: 'DEC', duration: '21:00 - 22:00', time: '60 minutes', sport: 'Tennis court 2', amount: '$29.00'},
+    {id:1, date: '16', month: 'DEC', duration: '21:00 - 22:00', time: '60 minutes', sport: 'Tennis court 2', amount: '$29.00'},
+    {id:1, date: '16', month: 'DEC', duration: '21:00 - 22:00', time: '60 minutes', sport: 'Tennis court 2', amount: '$29.00'}
+]
+
+export const EachJobs = () =>{
+    return(
+        <ul className='flex flex-col gap-2'>
+            <p className='text-[1.1rem] font-[600] mt-2'>60 minutes</p>
+            {
+                jobsDataSixtyminutes.map((item, index) =>(
+                    <li key={index} className='flex items-center justify-between shadow-[#ccc] shadow-md rounded-md bg-white p-2 pr-4'>
+                        <div className='flex items-center gap-4'>
+                            <p className='flex flex-col items-center text-white bg-orange-600 py-2 px-[.8rem] rounded-md'>
+                                <span className='font-[700] text-[1.6rem]'>{item.date}</span><span className='text-[1rem] font-[700]'>{item.month}.</span>
+                            </p>
+                            <p className='flex flex-col font-[500]'>
+                                <span className='text-[1.1rem]'>{item.duration}</span><span className='text-[.85rem] text-[#ccc]'>{item.time}</span>
+                            </p>
+                            <p className='text-[1.3rem] font-[600] ml-4'>{item.sport}</p>
+                        </div>
+                        <div className='flex items-center gap-8'>
+                            <p className='text-[1.5rem] font-[700]'>{item.amount}</p>
+                            <button className='text-white bg-orange-500 p-2 px-4 rounded-[100px]'>Add</button>
+                        </div>
+                    </li>
+                ))
+            }
+        </ul>
+    )
+}
 
 const Clubdetails = () => {
+    const [ activeTime, setActiveTime ] = useState(false)
+
+    const { state } = useLocation()
+    const { id } = useParams()
+console.log();
+
   return (
-    <div>
+    <div className='bg-white'>
       <Mainheader />
-      <section className='py-6 px-8 md:px-14 flex gap-6 mt-6'>
+      <div className='flex pt-4 px-8 md:px-14 gap-4'>
+        <Link className='hover:underline hover:text-orange-500' to='/'>Meet and Play</Link>
+        <Link className='hover:underline hover:text-orange-500' to='/clubs'>Clubs</Link>
+        <p className='text-orange-500'>{state.title}</p>
+      </div>
+      <section className='py-6 px-8 md:px-14 flex gap-6 mb-6'>
         <aside className='w-4/6'>
-            <h1 className='text-[3rem] font-[800] text-[#262727]'>TPV Spitsbergen</h1>
+            <h1 className='text-[3rem] font-[800] text-[#262727]'>{state.title}</h1>
             <div className='flex items-center gap-2'>
                 <Link className='text-[1.7rem] text-[#262727] font-extrabold border-[2px] rounded-md border-orange-500 p-1'>JOBS</Link>
                 <Link className='text-[1.7rem] text-[#262727] font-extrabold border-[2px] rounded-md border-orange-500 p-1'>ACTIVITES</Link>
@@ -56,13 +105,17 @@ const Clubdetails = () => {
             <div className='mt-4'>
                 <h1 className='text-[1.5rem] font-[500] text-[#262727]'>Time</h1>
                 <div className='flex items-center gap-4'>
-                    <button className='border-[1px] border-blue-800 py-1 px-2 rounded-md'>9:30am</button>
+                    <button onClick={() => setActiveTime(!activeTime)} className={`border-[1px] border-blue-800 py-1 px-2 rounded-md ${activeTime ? 'bg-blue-800 text-white': ''}`}>9:30am</button>
                     <button className='border-[1px] border-blue-800 py-1 px-2 rounded-md'>9:30am</button>
                     <button className='border-[1px] border-blue-800 py-1 px-2 rounded-md'>9:30am</button>
                     <button className='border-[1px] border-blue-800 py-1 px-2 rounded-md'>9:30am</button>
                     <button className='border-[1px] border-blue-800 py-1 px-2 rounded-md'>9:30am</button>
                     <button className='border-[1px] border-blue-800 py-1 px-2 rounded-md'>9:30am</button>
                 </div>
+            </div>
+            <div className='mt-6'>
+                <h1 className='text-[1.5rem] font-[500] text-[#262727]'>Jobs</h1>
+                <EachJobs />
             </div>
         </aside>
         <aside className='w-2/6'>
@@ -71,8 +124,29 @@ const Clubdetails = () => {
                 <p className='text-[1rem] my-4 font-[500]'>Potjesdam 4, 1722 XN SOUTH <br /> SCHARWOUDE</p>
                 <img className='h-40 w-full' src={Dummymap} alt="" />
             </div>
+            <div className='mt-4'>
+                <p className='text-[1.2rem] font-[700]'>Club Details</p>
+                <div className='bg-white'><img src={state.image} alt="" /></div>
+                <div>
+                    <p className='text-[.95rem] font-[700]'>Contact</p>
+                    <p>+31 513 632 363</p>
+                    <p>info@plantwee.nl</p>
+                    <Link>www.plantwee.nl</Link>
+                </div>
+                <div className='mt-6'>
+                    <p className='text-[.95rem] font-[700]'>Accommodation</p>
+                    <p><strong>Facilities:</strong> There is a canteen for a delicious cup of coffee or something else to eat, you can also use the toilets and showers there.</p>
+                </div>
+            </div>
         </aside>
       </section>
+      <section>
+        <Usefullinks />
+      </section>
+      <footer>
+        <Partners />
+        <Footer />
+      </footer>
     </div>
   )
 }

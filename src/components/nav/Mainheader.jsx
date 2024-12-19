@@ -13,6 +13,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { BiSolidTennisBall } from "react-icons/bi";
 import { GiTennisRacket } from 'react-icons/gi';
 import { MdLiveTv } from 'react-icons/md';
+import LoginSignup from '../loginandsignup/LoginSignup';
 import './navbar.css'
 
 const navLinks = [
@@ -26,19 +27,19 @@ const navLinks = [
   // {text: 'KNLTB TV', icon: <MdLiveTv />, link: '/knltb tv'},
 ]
 
-export const SidebarNenu = () =>{
-  return(
-    <div>
-      <ul className='w-full bg-[#19328A] absolute top-[rem] left-0 h-[] flex flex-col justify-start gap-2 text-white z-50'>
-            {navLinks.map((link, index) =>(
-                // <li  className=''>
-                <Link key={index} className='flex items-center gap-1 text-[.94rem] p-4 sidelink'><span className='text-[1.2rem] font-[600]'>{link.icon}</span>{link.text}</Link>
-                // </li>
-            ))}
-        </ul>
-    </div>
-  )
-}
+// export const SidebarNenu = () =>{
+//   return(
+//     <div>
+//       <ul className='w-full bg-[#19328A] absolute top-[rem] left-0 h-[] flex flex-col justify-start gap-2 text-white z-50'>
+//             {navLinks.map((link, index) =>(
+//                 // <li  className=''>
+//                 <Link key={index} className='flex items-center gap-1 text-[.94rem] p-4 sidelink'><span className='text-[1.2rem] font-[600]'>{link.icon}</span>{link.text}</Link>
+//                 // </li>
+//             ))}
+//         </ul>
+//     </div>
+//   )
+// }
 
 export const SideheaderMenu = () =>{
   const [ showSidebar, setShowSidebar ] = useState(false)
@@ -57,6 +58,7 @@ export const SideheaderMenu = () =>{
             <SidebarNenu />
           )
         } */}
+        {/* <LoginSignup /> */}
         <Link className='hover:underline hover:text-orange-500 sidelink'>Explanation</Link>
         <Link className='hover:underline hover:text-orange-500 sidelink'>Discover</Link>
         <Link className='hover:underline hover:text-orange-500 sidelink'>To play</Link>
@@ -93,24 +95,12 @@ const Mainheader = () => {
       <div className='flex items-center md:gap-2 xl:gap-10'>
         <div className='mr-6'><Link><img src={Logo2} alt="" /></Link></div>
         <ul className='mainheaderNav'>
-          <li>
-              <Link>Explanation</Link>
-          </li>
-          <li>
-              <Link>Discover</Link>
-          </li>
-          <li>
-              <Link>To play</Link>
-          </li>
-          <li>
-              <Link>Download</Link>
-          </li>
-          <li>
-              <Link>Gift card</Link>
-          </li>
-          <li>
-              <Link>News</Link>
-          </li>
+          <li><Link>Explanation</Link></li>
+          <li><Link>Discover</Link></li>
+          <li><Link>To play</Link></li>
+          <li><Link>Download</Link> </li>
+          <li><Link>Map of facilities</Link></li>
+          <li><Link>News</Link></li>
         </ul>
       </div>
       <div className='flex items-center gap-4 login'>
@@ -118,7 +108,7 @@ const Mainheader = () => {
         <div className='flex items-center gap-[5px] text-white'>
         <Link className='text-[white] bg-[#19328A] font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Sign Up</Link>
         <span className='shadow-xl border-[1px] border-[#aaa] rounded-full p-[.4rem] '> <TbWorld  className='text-[1.5rem] font-[600] media'/></span>
-        <Link className='shadow-xl border-[1px] border-[#aaa] rounded-full p-[.4rem] '><FiSearch  className='text-[1.3rem] font-[600] media'/></Link>
+        {/* <Link className='shadow-xl border-[1px] border-[#aaa] rounded-full p-[.4rem] '><FiSearch  className='text-[1.3rem] font-[600] media'/></Link> */}
         <Link className='shadow-xl border-[1px] border-[#aaa] rounded-full p-[.4rem] '><MdOutlinePersonOutline className='text-[1.5rem] font-[600] media'/></Link>
       </div>
       </div>
