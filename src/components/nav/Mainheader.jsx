@@ -43,6 +43,19 @@ const navLinks = [
 
 export const SideheaderMenu = () =>{
   const [ showSidebar, setShowSidebar ] = useState(false)
+  const [ showSignup, setShowSignup ] = useState(false)
+  useEffect(() => {
+    if (showSignup) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+
+    // Cleanup when component unmounts
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [showSignup]);
   const handleSidebar = () =>{
     setShowSidebar(!showSidebar)
   }
@@ -66,9 +79,16 @@ export const SideheaderMenu = () =>{
         <Link className='hover:underline hover:text-orange-500 sidelink'>Map of facilities</Link>
         <Link className='hover:underline hover:text-orange-500 sidelink'>News</Link>
         <div className='mb-20 flex items-center justify-end gap-4'>
-          <Link className='text-white bg-[#193291] font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Sign Up <IoIosArrowRoundForward className='text-[1.4rem] font-[600]'/></Link>
+        <button 
+        onClick={() => setShowSignup(true)}
+        className='text-[white] bg-[#19328A] font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Sign Up</button>
         </div>
       </ul>
+      {
+        showSignup && (
+          <LoginSignup showSignup={showSignup} setShowSignup={setShowSignup}/>
+        )
+      }
     </div>
   )
 }
