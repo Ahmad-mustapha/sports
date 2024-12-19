@@ -98,8 +98,24 @@ function Hero() {
         <Jobs />
       </section>
       <section className='bg-[#f5f5f5] px-8 md:px-14 py-6 overflow-x-hidden'>
-        <div className="mb-8 lg:flex lg:items-center lg:justify-center">
+        <div className="mb-8 2xl:flex 2xl:items-center 2xl:justify-center">
           <p className="font-[500] text-[1.5rem] lg:text-[2rem]">Available activities from Saturday 7 December </p>
+        </div>
+          <div className='sm:flex sm:items-center sm:justify-center'>
+            <SportsCarousel selectedSport={selectedSport}/>
+          </div>
+      </section>
+      <section className='bg-[#f5f5f5] px-8 md:px-14 py-6 overflow-x-hidden'>
+        <div className="mb-8 2xl:flex 2xl:items-center 2xl:justify-center">
+          <p className="font-[500] text-[1.5rem] lg:text-[2rem]">Available activities from Saturday 8 December </p>
+        </div>
+          <div className='sm:flex sm:items-center sm:justify-center'>
+            <SportsCarousel selectedSport={selectedSport}/>
+          </div>
+      </section>
+      <section className='bg-[#f5f5f5] px-8 md:px-14 py-6 overflow-x-hidden'>
+        <div className="mb-8 2xl:flex 2xl:items-center 2xl:justify-center">
+          <p className="font-[500] text-[1.5rem] lg:text-[2rem]">Available activities from Saturday 9 December </p>
         </div>
           <div className='sm:flex sm:items-center sm:justify-center'>
             <SportsCarousel selectedSport={selectedSport}/>

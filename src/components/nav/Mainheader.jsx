@@ -58,7 +58,7 @@ export const SideheaderMenu = () =>{
             <SidebarNenu />
           )
         } */}
-        {/* <LoginSignup /> */}
+        
         <Link className='hover:underline hover:text-orange-500 sidelink'>Explanation</Link>
         <Link className='hover:underline hover:text-orange-500 sidelink'>Discover</Link>
         <Link className='hover:underline hover:text-orange-500 sidelink'>To play</Link>
@@ -76,9 +76,9 @@ export const SideheaderMenu = () =>{
 
 const Mainheader = () => {
   const [ showMenu, setShowMenu ] = useState(false)
-
+  const [ showSignup, setShowSignup ] = useState(false)
   useEffect(() => {
-    if (showMenu) {
+    if (showMenu, showSignup) {
       document.body.classList.add("no-scroll");
     } else {
       document.body.classList.remove("no-scroll");
@@ -88,7 +88,7 @@ const Mainheader = () => {
     return () => {
       document.body.classList.remove("no-scroll");
     };
-  }, [showMenu]);
+  }, [showMenu, showSignup]);
 
   return (
     <div className='mainheader border-b-[] border-[#ccc]'>
@@ -106,7 +106,9 @@ const Mainheader = () => {
       <div className='flex items-center gap-4 login'>
         {/* <div className='w-12 bg-blue-950 rounded-lg p-2'><Link><img src={Logo3} alt="" /></Link></div> */}
         <div className='flex items-center gap-[5px] text-white'>
-        <Link className='text-[white] bg-[#19328A] font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Sign Up</Link>
+        <button 
+        onClick={() => setShowSignup(true)}
+        className='text-[white] bg-[#19328A] font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Sign Up</button>
         <span className='shadow-xl border-[1px] border-[#aaa] rounded-full p-[.4rem] '> <TbWorld  className='text-[1.5rem] font-[600] media'/></span>
         {/* <Link className='shadow-xl border-[1px] border-[#aaa] rounded-full p-[.4rem] '><FiSearch  className='text-[1.3rem] font-[600] media'/></Link> */}
         <Link className='shadow-xl border-[1px] border-[#aaa] rounded-full p-[.4rem] '><MdOutlinePersonOutline className='text-[1.5rem] font-[600] media'/></Link>
@@ -123,6 +125,13 @@ const Mainheader = () => {
       { showMenu && (
         <SideheaderMenu showMenu={showMenu}/>
       ) }
+
+
+      {
+        showSignup && (
+          <LoginSignup showSignup={showSignup} setShowSignup={setShowSignup}/>
+        )
+      }
       {/* <Link><FiSearch className='text-orange-500 mr-8 font-[500] text-[1.2rem]'/></Link> */}
     </div>
   )
