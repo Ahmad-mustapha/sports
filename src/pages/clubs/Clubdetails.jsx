@@ -55,8 +55,8 @@ console.log();
         <Link className='hover:underline hover:text-orange-500' to='/clubs'>Clubs</Link>
         <p className='text-orange-500'>{state.title}</p>
       </div>
-      <section className='py-6 px-8 md:px-14 flex gap-6 mb-6'>
-        <aside className='w-4/6'>
+      <section className='py-6 px-8 md:px-14 flex flex-wrap md:flex-nowrap gap-6 mb-6'>
+        <aside className='w-full md:w-4/6'>
             <h1 className='text-[3rem] font-[800] text-[#262727]'>{state.title}</h1>
             <div className='flex items-center gap-2'>
                 <Link className='text-[1.7rem] text-[#262727] font-extrabold border-[2px] rounded-md border-orange-500 p-1'>JOBS</Link>
@@ -104,7 +104,7 @@ console.log();
             </div>
             <div className='mt-4'>
                 <h1 className='text-[1.5rem] font-[500] text-[#262727]'>Time</h1>
-                <div className='flex items-center gap-4'>
+                <div className='flex items-center gap-4 flex-wrap'>
                     <button onClick={() => setActiveTime(!activeTime)} className={`border-[1px] border-blue-800 py-1 px-2 rounded-md ${activeTime ? 'bg-blue-800 text-white': ''}`}>9:30am</button>
                     <button className='border-[1px] border-blue-800 py-1 px-2 rounded-md'>9:30am</button>
                     <button className='border-[1px] border-blue-800 py-1 px-2 rounded-md'>9:30am</button>
@@ -118,15 +118,15 @@ console.log();
                 <EachJobs />
             </div>
         </aside>
-        <aside className='w-2/6'>
+        <aside className='w-full md:w-2/6'>
             <div className='rounded-lg bg-[#193291] py-8 px-10 text-white'>
                 <p className='font-[600] text-[1.7rem]'>Visiting address</p>
                 <p className='text-[1rem] my-4 font-[500]'>Potjesdam 4, 1722 XN SOUTH <br /> SCHARWOUDE</p>
                 <img className='h-40 w-full' src={Dummymap} alt="" />
             </div>
-            <div className='mt-4'>
+            <div className='mt-4 w-full'>
                 <p className='text-[1.2rem] font-[700]'>Club Details</p>
-                <div className='bg-white'><img src={state.image} alt="" /></div>
+                <div className='bg-white w-full'><img className='w-full' src={state.image} alt="" /></div>
                 <div>
                     <p className='text-[.95rem] font-[700]'>Contact</p>
                     <p>+31 513 632 363</p>
