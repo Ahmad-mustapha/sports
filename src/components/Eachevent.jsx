@@ -17,7 +17,7 @@ const Eachevent = () => {
       {
         eachEventData.map((event, index) =>(
             <li key={index} className='h-32 bg-white shadow-lg rounded-lg hover:text-orange-500'>
-                <Link className='flex items-center justify-between gap-2 h-full'>
+                <Link to={`/event/${event.id}`} className='flex items-center justify-between gap-2 h-full'>
                     <div className='text-[white] h-full p-6 px-8 flex items-center justify-center bg-blue-800 rounded-l-lg'>
                         <span className='flex flex-col bg-orange-500 p-2 px-4 rounded-md font-[700]'><p className='text-[1.6rem]'>23</p><p className='text-[.9rem] text-slate-300'>DEC.</p></span>
                     </div>

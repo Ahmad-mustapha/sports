@@ -9,8 +9,8 @@ import { Usefullinks, Footer, Partners } from '../../components'
 
 const jobsDataSixtyminutes = [
     {id:1, date: '16', month: 'DEC', duration: '21:00 - 22:00', time: '60 minutes', sport: 'Tennis court 2', amount: '$29.00'},
-    {id:1, date: '16', month: 'DEC', duration: '21:00 - 22:00', time: '60 minutes', sport: 'Tennis court 2', amount: '$29.00'},
-    {id:1, date: '16', month: 'DEC', duration: '21:00 - 22:00', time: '60 minutes', sport: 'Tennis court 2', amount: '$29.00'}
+    {id:2, date: '16', month: 'DEC', duration: '21:00 - 22:00', time: '60 minutes', sport: 'Tennis court 2', amount: '$29.00'},
+    {id:3, date: '16', month: 'DEC', duration: '21:00 - 22:00', time: '60 minutes', sport: 'Tennis court 2', amount: '$29.00'}
 ]
 
 export const EachJobs = () =>{

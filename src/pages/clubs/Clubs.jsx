@@ -1,11 +1,17 @@
-import React from "react"
+import React, { useState } from "react"
 import { Mainheader } from "../../components"
 import Map from '../../assets/dummymap.png'
 import Location from "./Location"
+import { IoMdTennisball } from 'react-icons/io'
+import { GiTennisRacket } from "react-icons/gi";
+import { MdOutlineSportsBaseball } from 'react-icons/md';
+import { FaBasketball } from 'react-icons/fa6';
+import { IoMdFootball } from 'react-icons/io';
 import {Usefullinks, Footer, Partners} from "../../components"
 
 
 const CLubs = () => {
+    const [ activeSport, setActiveSport ] = useState('All sports')
   return (
     <div>
       <Mainheader />
@@ -70,17 +76,25 @@ const CLubs = () => {
                 <p className="text-[#dae1e3] text-[.9rem] font-[600] mb-2">Duration</p>
                 <div className='flex items-center justify-center sm:justify-start flex-wrap gap-2 hero-content'>
                     <button 
-                    className='text-orange-500 border-[1px] text-[.9rem] border-orange-500 bg-white rounded-2xl px-2 py-[.1rem]'> Tennis</button>
+                    onClick={() =>setActiveSport('All sports')}
+                    className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
+                    ${activeSport === 'All sports'? 'bg-[#d94b18] text-white': ''}`}>45 minutes</button>
+                    <button 
+                    onClick={() =>setActiveSport('tennis')}
+                    className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
+                    ${activeSport === 'tennis' ? 'bg-[#d94b18] text-white': ''}`}> 60 minutes</button>
                     <button
-                    className='text-orange-500 border-[1px] text-[.9rem] border-orange-500 bg-white rounded-2xl px-2 py-[.1rem]'>Padel</button>
+                    onClick={() =>setActiveSport('padel')} 
+                    className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
+                    ${activeSport === 'padel'? 'bg-[#d94b18] text-white': ''}`}>90 minutes</button>
                     <button
-                    className='text-orange-500 border-[1px] text-[.9rem] border-orange-500 bg-white rounded-2xl px-2 py-[.1rem]'>Squash</button>
+                    onClick={() =>setActiveSport('squash')} 
+                    className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
+                    ${activeSport === 'squash' ? 'bg-[#d94b18] text-white': ''}`}>75 minutes</button>
                     <button
-                    className='text-orange-500 border-[1px] text-[.9rem] border-orange-500 bg-white rounded-2xl px-2 py-[.1rem]'>Pickleball</button>
-                    <button
-                    className='text-orange-500 border-[1px] text-[.9rem] border-orange-500 bg-white rounded-2xl px-2 py-[.1rem]'> Football</button>
-                    <button
-                    className='text-orange-500 border-[1px] text-[.9rem] border-orange-500 bg-white rounded-2xl px-2 py-[.1rem]'>Basketball</button>
+                    onClick={() =>setActiveSport('pickleball')} 
+                    className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
+                    ${activeSport === 'pickleball' ? 'bg-[#d94b18] text-white': ''}`}>20 minutes</button>
                 </div>
             </section>
         </section>
