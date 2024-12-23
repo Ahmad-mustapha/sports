@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom'
 import Firstimage from '../../assets/sporthero2.webp'
 import secimage from '../../assets/sporthero3.webp'
 import { IoMdTennisball } from 'react-icons/io'
-import { Mainheader, Eachevent, Meetandplay, Tennisandpadelinfo, Meetandplayapp } from '../../components'
+import { Mainheader, Eachevent, Meetandplay, Tennisandpadelinfo, Meetandplayapp, SportVirtual, Usefullinks, Footer, Partners } from '../../components'
 import Map from '../../assets/dummymap.png'
 
 const Discover = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [ activeSport, setActiveSport ] = useState('all')
     const images = [
         Firstimage,
         secimage,
@@ -59,18 +60,21 @@ const Discover = () => {
             </div>
           </form>
           <div className='flex items-center justify-center sm:justify-start flex-wrap gap-2 hero-content my-6'>
+          <button 
+            onClick={() =>setActiveSport('tennis')}
+            className={`buttons ${activeSport ? 'bg-orange-600 text-white': ''}`}>All sports</button>
             <button 
-            onClick={() =>('tennis')}
-            className='buttons'><IoMdTennisball className='text-[#d94b18] text-[1.2rem]'/> Tennis</button>
+            onClick={() =>setActiveSport('tennis')}
+            className={`buttons ${activeSport ? 'bg-orange-600 text-white': ''}`}><IoMdTennisball className='text-[#d94b18] text-[1.2rem]'/> Tennis</button>
             <button
-            onClick={() =>('padel')} 
-            className='buttons'> Padel</button>
+            onClick={() =>setActiveSport('padel')} 
+            className={`buttons ${activeSport ? 'bg-orange-600 text-white': ''}`}> Padel</button>
             <button
-            onClick={() =>('squash')} 
-            className='buttons'>Squash</button>
+            onClick={() =>setActiveSport('squash')} 
+            className={`buttons ${activeSport ? 'bg-orange-600 text-white': ''}`}>Squash</button>
             <button
-            onClick={() =>('pickleball')} 
-            className='buttons'>Pickleball</button>
+            onClick={() =>setActiveSport('pickleball')} 
+            className={`buttons ${activeSport ? 'bg-orange-600 text-white': ''}`}>Pickleball</button>
             </div>
       </section>
       <section className="p-4 flex items-center flex-wrap md:flex-nowrap">
@@ -90,6 +94,12 @@ const Discover = () => {
       <section>
         <Meetandplayapp />
       </section>
+      <section>
+        <SportVirtual />
+      </section>
+      <section className='border-y-[1px] border-[#ccc] mt-10'><Usefullinks /></section>
+      <section> <Partners /></section>
+      <section><Footer /></section>
     </div>
   )
 }

@@ -41,7 +41,7 @@ const navLinks = [
 //   )
 // }
 
-export const SideheaderMenu = () =>{
+export const SideheaderMenu = ({ setShowMenu }) =>{
   const [ showSidebar, setShowSidebar ] = useState(false)
   const [ showSignup, setShowSignup ] = useState(false)
   useEffect(() => {
@@ -72,12 +72,12 @@ export const SideheaderMenu = () =>{
           )
         } */}
         
-        <Link className='hover:underline hover:text-orange-500 sidelink'>Explanation</Link>
-        <Link className='hover:underline hover:text-orange-500 sidelink'>Discover</Link>
-        <Link className='hover:underline hover:text-orange-500 sidelink'>To play</Link>
-        <Link className='hover:underline hover:text-orange-500 sidelink'>Download</Link>
-        <Link className='hover:underline hover:text-orange-500 sidelink'>Map of facilities</Link>
-        <Link className='hover:underline hover:text-orange-500 sidelink'>News</Link>
+        <Link onClick={() => setShowMenu(false)} className='hover:underline hover:text-orange-500 sidelink'>Explanation</Link>
+        <Link onClick={() => setShowMenu(false)} to='/discover' className='hover:underline hover:text-orange-500 sidelink'>Discover</Link>
+        <Link onClick={() => setShowMenu(false)} className='hover:underline hover:text-orange-500 sidelink'>To play</Link>
+        <Link onClick={() => setShowMenu(false)} className='hover:underline hover:text-orange-500 sidelink'>Download</Link>
+        <Link onClick={() => setShowMenu(false)} className='hover:underline hover:text-orange-500 sidelink'>Map of facilities</Link>
+        <Link onClick={() => setShowMenu(false)} className='hover:underline hover:text-orange-500 sidelink'>News</Link>
         <div className='mb-20 flex items-center justify-end gap-4'>
         <button 
         onClick={() => setShowSignup(true)}
@@ -116,11 +116,11 @@ const Mainheader = () => {
         <div className='mr-6'><Link><img src={Logo2} alt="" /></Link></div>
         <ul className='mainheaderNav'>
           <li><Link>Explanation</Link></li>
-          <li><Link>Discover</Link></li>
+          <li><Link to='/discover'>Discover</Link></li>
           <li><Link>To play</Link></li>
           <li><Link>Download</Link> </li>
           <li><Link>Map of facilities</Link></li>
-          <li><Link>News</Link></li>
+          <li><Link to='/news'>News</Link></li>
         </ul>
       </div>
       <div className='flex items-center gap-4 login'>
@@ -143,7 +143,7 @@ const Mainheader = () => {
         className='text-[1.9rem] cursor-pointer'/>}
       </div>
       { showMenu && (
-        <SideheaderMenu showMenu={showMenu}/>
+        <SideheaderMenu showMenu={showMenu} setShowMenu={setShowMenu}/>
       ) }
 
 
