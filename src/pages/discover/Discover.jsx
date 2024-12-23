@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Firstimage from '../../assets/sporthero2.webp'
 import secimage from '../../assets/sporthero3.webp'
 import { IoMdTennisball } from 'react-icons/io'
-import { Mainheader } from '../../components'
+import { Mainheader, Eachevent, Meetandplay, Tennisandpadelinfo, Meetandplayapp } from '../../components'
+import Map from '../../assets/dummymap.png'
 
 const Discover = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -72,8 +73,22 @@ const Discover = () => {
             className='buttons'>Pickleball</button>
             </div>
       </section>
+      <section className="p-4 flex items-center flex-wrap md:flex-nowrap">
+            <section className="bg-[#eeeeee] p-4 w-full md:w-3/6 h-[400px] overflow-y-scroll">
+                <Eachevent />
+            </section>
+            <section className="w-full md:w-3/6 h-[400px] ">
+                <img src={Map} alt="" className="w-full h-full"/>
+            </section>
+      </section>
+      <section className=''>
+        <Meetandplay />
+      </section>
+      <section className='py-6 px-4 md:px-10'>
+        <Tennisandpadelinfo />
+      </section>
       <section>
-        
+        <Meetandplayapp />
       </section>
     </div>
   )
