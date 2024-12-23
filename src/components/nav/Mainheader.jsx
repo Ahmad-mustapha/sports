@@ -31,7 +31,7 @@ const navLinks = [
 //   return(
 //     <div>
 //       <ul className='w-full bg-[#19328A] absolute top-[rem] left-0 h-[] flex flex-col justify-start gap-2 text-white z-50'>
-//             {navLinks.map((link, index) =>(
+//             {navLinks to='/clubs'.map((link, index) =>(
 //                 // <li  className=''>
 //                 <Link key={index} className='flex items-center gap-1 text-[.94rem] p-4 sidelink'><span className='text-[1.2rem] font-[600]'>{link.icon}</span>{link.text}</Link>
 //                 // </li>
@@ -72,12 +72,12 @@ export const SideheaderMenu = ({ setShowMenu }) =>{
           )
         } */}
         
-        <Link onClick={() => setShowMenu(false)} className='hover:underline hover:text-orange-500 sidelink'>Explanation</Link>
-        <Link onClick={() => setShowMenu(false)} to='/discover' className='hover:underline hover:text-orange-500 sidelink'>Discover</Link>
+        <Link to='/' onClick={() => setShowMenu(false)} className='hover:underline hover:text-orange-500 sidelink'>Explanation</Link>
+        <Link to='/discover' onClick={() => setShowMenu(false)} className='hover:underline hover:text-orange-500 sidelink'>Discover</Link>
         <Link onClick={() => setShowMenu(false)} className='hover:underline hover:text-orange-500 sidelink'>To play</Link>
-        <Link onClick={() => setShowMenu(false)} className='hover:underline hover:text-orange-500 sidelink'>Download</Link>
+        <Link to='/download' onClick={() => setShowMenu(false)} className='hover:underline hover:text-orange-500 sidelink'>Download</Link>
         <Link onClick={() => setShowMenu(false)} className='hover:underline hover:text-orange-500 sidelink'>Map of facilities</Link>
-        <Link onClick={() => setShowMenu(false)} className='hover:underline hover:text-orange-500 sidelink'>News</Link>
+        <Link to='/clubs' onClick={() => setShowMenu(false)} className='hover:underline hover:text-orange-500 sidelink'>News</Link>
         <div className='mb-20 flex items-center justify-end gap-4'>
         <button 
         onClick={() => setShowSignup(true)}
@@ -113,13 +113,13 @@ const Mainheader = () => {
   return (
     <div className='mainheader border-b-[] border-[#ccc]'>
       <div className='flex items-center md:gap-2 xl:gap-10'>
-        <div className='mr-6'><Link><img src={Logo2} alt="" /></Link></div>
+        <div className='mr-6'><Link to='/'><img src={Logo2} alt="" /></Link></div>
         <ul className='mainheaderNav'>
-          <li><Link>Explanation</Link></li>
+          <li><Link to='/'>Explanation</Link></li>
           <li><Link to='/discover'>Discover</Link></li>
           <li><Link>To play</Link></li>
-          <li><Link>Download</Link> </li>
-          <li><Link>Map of facilities</Link></li>
+          <li><Link to='/download'>Download</Link> </li>
+          <li><Link to='/clubs'>Map of facilities</Link></li>
           <li><Link to='/news'>News</Link></li>
         </ul>
       </div>

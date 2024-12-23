@@ -21,6 +21,7 @@ function Hero() {
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [ selectedSport, setSelectedSport, ] = useState('tennis')
+  const [ activeSport, setActiveSport ] = useState('All sports')
   // console.log(selectedSport);
 
   // const handleSportChange = (sport) => {
@@ -42,26 +43,36 @@ function Hero() {
           backgroundImage: `url(${images[currentIndex]})`,
         }}
         className='py-6 px-8 md:px-14 hero-section'>
-          <div><Link className='text-[2.8rem] md:text-[3.4rem] font-[700] text-white cursor-pointer hero-content'>Search and book now</Link></div>
+          <div><Link to='/' className='text-[2.8rem] md:text-[3.4rem] font-[700] text-white cursor-pointer hero-content'>Search and book now</Link></div>
             <div className='flex items-center justify-center sm:justify-start flex-wrap gap-2 hero-content my-6'>
               <button 
-                onClick={() =>('tennis')}
-                className='buttons'><IoMdTennisball className='text-[#d94b18] text-[1.2rem]'/> Tennis</button>
+                onClick={() =>setActiveSport('All sports')}
+                className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
+                ${activeSport === 'All sports'? 'bg-[#d94b18] text-white': ''}`}>All sports</button>
+                <button 
+                onClick={() =>setActiveSport('tennis')}
+                className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
+                ${activeSport === 'tennis' ? 'bg-[#d94b18] text-white': ''}`}><IoMdTennisball className={`text-[#d94b18] text-[1.2rem] ${activeSport === 'tennis' ? 'text-white': ''}`}/> Tennis</button>
                 <button
-                onClick={() =>('padel')} 
-                className='buttons'><GiTennisRacket className='text-[#d94b18] text-[1.2rem]'/> Padel</button>
+                onClick={() =>setActiveSport('padel')} 
+                className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
+                ${activeSport === 'padel'? 'bg-[#d94b18] text-white': ''}`}><GiTennisRacket className={`text-[#d94b18] text-[1.2rem] ${activeSport === 'padel' ? 'text-white': ''}`}/> Padel</button>
                 <button
-                onClick={() =>('squash')} 
-                className='buttons'><MdOutlineSportsBaseball className='text-[#d94b18] text-[1.2rem]'/> Squash</button>
+                onClick={() =>setActiveSport('squash')} 
+                className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
+                ${activeSport === 'squash' ? 'bg-[#d94b18] text-white': ''}`}><MdOutlineSportsBaseball  className={`text-[#d94b18] text-[1.2rem] ${activeSport === 'squash' ? 'text-white': ''}`}/>Squash</button>
                 <button
-                onClick={() =>('pickleball')} 
-                className='buttons'><GiTennisRacket className='text-[#d94b18] text-[1.2rem]'/>Pickleball</button>
+                onClick={() =>setActiveSport('pickleball')} 
+                className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
+                ${activeSport === 'pickleball' ? 'bg-[#d94b18] text-white': ''}`}><GiTennisRacket className={`text-[#d94b18] text-[1.2rem] ${activeSport === 'pickleball' ? 'text-white': ''}`}/>Pickleball</button>
                 <button
-                onClick={() =>('squash')} 
-                className='buttons'><IoMdFootball className='text-[#d94b18] text-[1.2rem]'/> Football</button>
+                onClick={() =>setActiveSport('football')} 
+                className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
+                ${activeSport === 'football' ? 'bg-[#d94b18] text-white': ''}`}><IoMdFootball className={`text-[#d94b18] text-[1.2rem] ${activeSport === 'football' ? 'text-white': ''}`}/> Football</button>
                 <button
-                onClick={() =>('pickleball')} 
-                className='buttons'><FaBasketball className='text-[#d94b18] text-[1.2rem]'/> Basketball</button>
+                onClick={() =>setActiveSport('basketball')} 
+                className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
+                ${activeSport === 'basketball' ? 'bg-[#d94b18] text-white': ''}`}><FaBasketball  className={`text-[#d94b18] text-[1.2rem] ${activeSport === 'basketball' ? 'text-white': ''}`}/> Basketball</button>
             </div>
           <form action="">
             <div className='flex items-center flex-col lg:flex-row gap-8 mt-2 hero-content'>

@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { Homepage, Clubs, Clubdetails, Discover } from './pages/index'
+import { Homepage, Clubs, Clubdetails, Discover, Download } from './pages/index'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
           <Route path='/' element={<Homepage />}/>
           <Route path='/clubs' element={<Clubs />}/>
           <Route path='/discover' element={<Discover />}/>
+          <Route path='/download' element={<Download />}/>
           <Route path='/clubs/:id' element={<Clubdetails />}/>
         </Routes>
       </BrowserRouter>

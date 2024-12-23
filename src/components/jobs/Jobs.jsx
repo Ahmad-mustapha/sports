@@ -87,7 +87,7 @@ export function CarouselSize() {
                     />
                     <CardContent className='p-6'>
                         <p className="text-[1.4rem] lg:text-[1.7rem] text-white absolute left-3 bottom-[5.5rem] font-[500]">{name}</p>
-                        <div className="flex items-start"><Link className='text-[white] text-[1rem] bg-orange-500 font-[500] rounded-[100px] p-2 flex items-center gap-1'>View offer <IoIosArrowRoundForward className='text-[1.4rem] font-[600]'/></Link></div>
+                        <div className="flex items-start"><Link to='/clubs' className='text-[white] text-[1rem] bg-orange-500 font-[500] rounded-[100px] p-2 flex items-center gap-1'>View offer <IoIosArrowRoundForward className='text-[1.4rem] font-[600]'/></Link></div>
                     </CardContent>
                 </Card>
             </Link>

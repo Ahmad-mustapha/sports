@@ -5,7 +5,7 @@ import Googlebadge from '../assets/googleplaybadge.svg'
 import { Link } from 'react-router-dom'
 const Meetandplayapp = () => {
   return (
-    <div className='flex items-center justify-between flex-wrap-reverse md:flex-nowrap py-6 px-4 md:px-10 text-[#222]'>
+    <div className='flex items-center justify-center md:justify-between gap-8 flex-wrap-reverse md:flex-nowrap py-6 px-4 md:px-10 text-[#222]'>
       <div className='w-full md:w-3/6'><img src={Map} alt="" /></div>
       <div className='w-full md:w-3/6 flex flex-col gap-4'>
         <p className='text-[2.3rem] font-[800]'>MEET & PLAY APP</p>
