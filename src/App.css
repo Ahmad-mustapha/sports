@@ -75,3 +75,6 @@ li{
 .scroll ::-webkit-scrollbar-thumb{
     background-color: red;
 }
+.allbuttons{
+    background-color: white;
+}
