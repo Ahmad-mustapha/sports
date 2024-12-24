@@ -110,7 +110,8 @@ const CLubs = () => {
                 <Location />
             </section>
             <section className="w-full sm:w-3/6 h-[400px] ">
-                <img src={Map} alt="" className="w-full h-full"/>
+                {/* <img src={Map} alt="" className="w-full h-full"/> */}
+                <iframe width="100%" className='h-full' frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps trackers</a></iframe>
             </section>
         </section>
       </main>

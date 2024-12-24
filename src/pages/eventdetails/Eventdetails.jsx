@@ -6,7 +6,10 @@ import { IoArrowForward } from 'react-icons/io5'
 import Dummymap from '../../assets/dummymap.png'
 
 const Eventdetails = () => {
+
     const { state } = useLocation()
+    console.log(state);
+    
     const { id } = useParams()
 
   return (
@@ -49,11 +52,12 @@ const Eventdetails = () => {
             <div className='rounded-lg bg-[#193291] py-8 px-10 text-white'>
                 <p className='font-[600] text-[1.7rem]'>Visiting address</p>
                 <p className='text-[1rem] my-4 font-[500]'>Potjesdam 4, 1722 XN SOUTH <br /> SCHARWOUDE</p>
-                <img className='h-40 w-full' src={Dummymap} alt="" />
+                {/* <img className='h-40 w-full' src={Dummymap} alt="" /> */}
+                <iframe width="100%" className='h-full' frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps trackers</a></iframe>
             </div>
             <div className='mt-4 w-full'>
                 <p className='text-[1.2rem] font-[700]'>Club Details</p>
-                <div className='bg-white w-full'><img className='w-full' src={Dummymap} alt="" /></div>
+                <div className='bg-white w-full'><img className='w-full' src={state.image} alt="" /></div>
                 <div>
                     <p className='text-[.95rem] font-[700]'>Contact</p>
                     <p>+31 513 632 363</p>
