@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Link } from "react-router-dom"
 import { Mainheader } from "../../components"
 import Map from '../../assets/dummymap.png'
 import Location from "./Location"
@@ -7,6 +8,7 @@ import { GiTennisRacket } from "react-icons/gi";
 import { MdOutlineSportsBaseball } from 'react-icons/md';
 import { FaBasketball } from 'react-icons/fa6';
 import { IoMdFootball } from 'react-icons/io';
+import { MdKeyboardDoubleArrowRight } from "react-icons/md"
 import {Usefullinks, Footer, Partners} from "../../components"
 
 
@@ -15,6 +17,11 @@ const CLubs = () => {
   return (
     <div>
       <Mainheader />
+      <div className="flex items-center gap-2 pt-6 px-4 md:px-10">
+        <Link className="hover:text-orange-500">Meet & Play</Link>
+        <MdKeyboardDoubleArrowRight />
+        <p className="text-orange-500">Clubs</p>
+      </div>
       <main className="py-6 px-4 md:px-10">
         <section className=" text-[#4c535a] bg-[#193291] rounded-t-md p-6">
             <section className="flex items-center justify-center sm:justify-start gap-6 flex-wrap">
@@ -78,23 +85,23 @@ const CLubs = () => {
                     <button 
                     onClick={() =>setActiveSport('All sports')}
                     className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
-                    ${activeSport === 'All sports'? 'bg-[#d94b18] text-white': ''}`}>45 minutes</button>
+                    ${activeSport === 'All sports'? 'bg-orange-700 text-white': ''}`}>45 minutes</button>
                     <button 
                     onClick={() =>setActiveSport('tennis')}
                     className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
-                    ${activeSport === 'tennis' ? 'bg-[#d94b18] text-white': ''}`}> 60 minutes</button>
+                    ${activeSport === 'tennis' ? 'bg-orange-700 text-white': ''}`}> 60 minutes</button>
                     <button
                     onClick={() =>setActiveSport('padel')} 
                     className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
-                    ${activeSport === 'padel'? 'bg-[#d94b18] text-white': ''}`}>90 minutes</button>
+                    ${activeSport === 'padel'? 'bg-orange-700 text-white': ''}`}>90 minutes</button>
                     <button
                     onClick={() =>setActiveSport('squash')} 
                     className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
-                    ${activeSport === 'squash' ? 'bg-[#d94b18] text-white': ''}`}>75 minutes</button>
+                    ${activeSport === 'squash' ? 'bg-orange-700 text-white': ''}`}>75 minutes</button>
                     <button
                     onClick={() =>setActiveSport('pickleball')} 
                     className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
-                    ${activeSport === 'pickleball' ? 'bg-[#d94b18] text-white': ''}`}>20 minutes</button>
+                    ${activeSport === 'pickleball' ? 'bg-orange-700 text-white': ''}`}>20 minutes</button>
                 </div>
             </section>
         </section>

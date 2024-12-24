@@ -53,23 +53,23 @@ const Discover = () => {
             <button 
               onClick={() =>setActiveSport('All sports')}
               className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
-              ${activeSport === 'All sports'? 'bg-[#d94b18] text-white': ''}`}>All sports</button>
+              ${activeSport === 'All sports'? 'bg-orange-700 text-white': ''}`}>All sports</button>
               <button 
               onClick={() =>setActiveSport('tennis')}
               className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
-              ${activeSport === 'tennis' ? 'bg-[#d94b18] text-white': ''}`}><IoMdTennisball className={`text-[#d94b18] text-[1.2rem] ${activeSport === 'tennis' ? 'text-white': ''}`}/> Tennis</button>
+              ${activeSport === 'tennis' ? 'bg-orange-700 text-white': ''}`}><IoMdTennisball className={`text-[#d94b18] text-[1.2rem] ${activeSport === 'tennis' ? 'text-white': ''}`}/> Tennis</button>
               <button
               onClick={() =>setActiveSport('padel')} 
               className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
-              ${activeSport === 'padel'? 'bg-[#d94b18] text-white': ''}`}><GiTennisRacket className={`text-[#d94b18] text-[1.2rem] ${activeSport === 'padel' ? 'text-white': ''}`}/> Padel</button>
+              ${activeSport === 'padel'? 'bg-orange-700 text-white': ''}`}><GiTennisRacket className={`text-[#d94b18] text-[1.2rem] ${activeSport === 'padel' ? 'text-white': ''}`}/> Padel</button>
               <button
               onClick={() =>setActiveSport('squash')} 
               className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
-              ${activeSport === 'squash' ? 'bg-[#d94b18] text-white': ''}`}><MdOutlineSportsBaseball  className={`text-[#d94b18] text-[1.2rem] ${activeSport === 'squash' ? 'text-white': ''}`}/>Squash</button>
+              ${activeSport === 'squash' ? 'bg-orange-700 text-white': ''}`}><MdOutlineSportsBaseball  className={`text-[#d94b18] text-[1.2rem] ${activeSport === 'squash' ? 'text-white': ''}`}/>Squash</button>
               <button
               onClick={() =>setActiveSport('pickleball')} 
               className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
-              ${activeSport === 'pickleball' ? 'bg-[#d94b18] text-white': ''}`}><GiTennisRacket className={`text-[#d94b18] text-[1.2rem] ${activeSport === 'pickleball' ? 'text-white': ''}`}/>Pickleball</button>
+              ${activeSport === 'pickleball' ? 'bg-orange-700 text-white': ''}`}><GiTennisRacket className={`text-[#d94b18] text-[1.2rem] ${activeSport === 'pickleball' ? 'text-white': ''}`}/>Pickleball</button>
             </div>
       </section>
       <section className="p-4 flex items-center flex-wrap md:flex-nowrap">

@@ -1,5 +1,5 @@
 import { Mainheader } from '../../components'
-import { useLocation, useParams } from 'react-router-dom'
+import { NavLink, useLocation, useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import Dummymap from '../../assets/dummymap.png'
 import { useState } from 'react'
@@ -59,8 +59,15 @@ console.log();
         <aside className='w-full md:w-4/6'>
             <h1 className='text-[3rem] font-[800] text-[#262727]'>{state.title}</h1>
             <div className='flex items-center gap-2'>
-                <Link className='text-[1.7rem] text-[#262727] font-extrabold border-[2px] rounded-md border-orange-500 p-1'>JOBS</Link>
-                <Link className='text-[1.7rem] text-[#262727] font-extrabold border-[2px] rounded-md border-orange-500 p-1'>ACTIVITES</Link>
+                <NavLink
+                to={`/clubs/${id}`}  
+                end
+                state={{ title: state.title, image: state.image }}
+                className={({ isActive }) => `text-[1.7rem] text-[#262727] font-extrabold border-[2px] rounded-md border-orange-500 p-1 ${isActive ? 'bg-orange-600': ''}`}>JOBS</NavLink>
+                <NavLink 
+                to={`/clubs/${id}/activities`}
+                state={{ title: state.title, image: state.image }}
+                className='text-[1.7rem] text-[#262727] font-extrabold border-[2px] rounded-md border-orange-500 p-1'>ACTIVITES</NavLink>
             </div>
             <section className="flex items-center justify-center sm:justify-start gap-6 flex-wrap text-[#4c535a] bg-[#193291] rounded-md p-6">
                 <div className="w-full sm:w-[160px]">
