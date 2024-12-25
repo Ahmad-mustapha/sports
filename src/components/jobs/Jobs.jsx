@@ -22,6 +22,8 @@ import Utrecht from '../../assets/Utrecht.webp'
 import NoordBrabant from '../../assets/NoordBrabant.webp'
 import Zeeland from '../../assets/Zeeland.webp'
 
+import { IoArrowForward } from "react-icons/io5";
+
 
 export function CarouselSize() {
   const jobData = [
@@ -108,7 +110,10 @@ const Jobs = () => {
           <p className="font-[600] text-[1.3rem] text-left md:text-[2rem]">
             Find and book a job in your province
           </p>
-          <Link to='/clubs' className="text-orange-500 font-[500]">View all</Link>
+          <div className="flex items-center gap-3">
+            <Link to='/clubs' className="text-orange-500 font-[500]">Show on map</Link>
+            <Link to='/clubs' className="text-white rounded-[100px] bg-orange-500 p-2 px-4 font-[500] flex items-center gap-1">Show all clubs <IoArrowForward /></Link>
+          </div>
         </div>
         <CarouselSize />
       </div>
