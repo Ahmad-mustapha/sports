@@ -98,7 +98,7 @@ export const SportsCarousel = ({ selectedSport }) => {
         <CarouselContent className=''>
           {carouselData.map(({ id, title, description, image, date, meter, price, actnum }) => (
             <CarouselItem key={id} className="sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <Card className="relative bg-white lg:h-[430px]">
+                <Card className="relative bg-white lg:h-[380px]">
                     <div className="absolute right-0 top-0 bg-orange-600 px-4 py-2 rounded-bl-md">
                         <p className="text-white text-[1.5rem] font-[500]">{meter}</p>
                         <p className="text-[#fdfdfd] text-[.9rem] font-[500]">KM</p>
@@ -110,14 +110,13 @@ export const SportsCarousel = ({ selectedSport }) => {
                           alt={title}
                       />
                     </div>
-                    <CardContent className="flex flex-col justify-between h-[230px]">
+                    <CardContent className="flex flex-col justify-between h-[180px]">
                         <div>
                             <p className="text-[1rem] font-[500] mt-4">{description}</p>
                             <p className="text-[#777] text-[.85rem]">{date} {price}</p>
                         </div>
-                        <div className="flex items-center justify-between mb-4">
-                            <Link className='text-[white] text-[.85rem] bg-orange-500 font-[500] rounded-[100px] px-2 py-1'> Book</Link>
-                            <Link className='text-[.85rem] text-orange-500 font-[500]'> Other {actnum} activites</Link>
+                        <div className="flex items-center justify-end mb-4">
+                            <Link to='/' className='text-[white] text-[.85rem] bg-orange-500 font-[500] rounded-[100px] px-2 py-1'> Reserve</Link>
                         </div>
                     </CardContent>
                 </Card>

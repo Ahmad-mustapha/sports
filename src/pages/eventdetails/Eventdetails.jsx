@@ -11,6 +11,8 @@ const Eventdetails = () => {
     console.log(state);
     
     const { id } = useParams()
+    console.log(id);
+    
 
   return (
     <div>
@@ -57,7 +59,7 @@ const Eventdetails = () => {
             </div>
             <div className='mt-4 w-full'>
                 <p className='text-[1.2rem] font-[700]'>Club Details</p>
-                <div className='bg-white w-full'><img className='w-full' src={state.image} alt="" /></div>
+                {/* <div className='bg-white w-full'><img className='w-full' src={state.image} alt="" /></div> */}
                 <div>
                     <p className='text-[.95rem] font-[700]'>Contact</p>
                     <p>+31 513 632 363</p>

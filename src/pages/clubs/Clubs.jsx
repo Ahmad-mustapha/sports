@@ -84,24 +84,24 @@ const CLubs = () => {
                 <div className='flex items-center justify-center sm:justify-start flex-wrap gap-2 hero-content'>
                     <button 
                     onClick={() =>setActiveSport('All sports')}
-                    className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
-                    ${activeSport === 'All sports'? 'bg-orange-700 text-white': ''}`}>45 minutes</button>
+                    className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] text-[#d94b18] rounded-[100px] 
+                    ${activeSport === 'All sports'? 'bg-orange-700 text-white': 'bg-white'}`}>45 minutes</button>
                     <button 
                     onClick={() =>setActiveSport('tennis')}
-                    className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
-                    ${activeSport === 'tennis' ? 'bg-orange-700 text-white': ''}`}> 60 minutes</button>
+                    className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] text-[#d94b18] rounded-[100px] 
+                    ${activeSport === 'tennis'? 'bg-orange-700 text-white': 'bg-white'}`}> 60 minutes</button>
                     <button
                     onClick={() =>setActiveSport('padel')} 
-                    className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
-                    ${activeSport === 'padel'? 'bg-orange-700 text-white': ''}`}>90 minutes</button>
+                    className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] text-[#d94b18] rounded-[100px] 
+                    ${activeSport === 'padel'? 'bg-orange-700 text-white': 'bg-white'}`}>90 minutes</button>
                     <button
                     onClick={() =>setActiveSport('squash')} 
-                    className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
-                    ${activeSport === 'squash' ? 'bg-orange-700 text-white': ''}`}>75 minutes</button>
+                    className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] text-[#d94b18] rounded-[100px] 
+                    ${activeSport === 'squash'? 'bg-orange-700 text-white': 'bg-white'}`}>75 minutes</button>
                     <button
                     onClick={() =>setActiveSport('pickleball')} 
-                    className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] bg-white text-[#d94b18] rounded-[100px] 
-                    ${activeSport === 'pickleball' ? 'bg-orange-700 text-white': ''}`}>20 minutes</button>
+                    className={`flex items-center gap-1 border-[1px] border-[#d94b18] py-[.6rem] px-[.6rem] text-[1.1rem] font-[500] text-[#d94b18] rounded-[100px] 
+                    ${activeSport === 'pickleball'? 'bg-orange-700 text-white': 'bg-white'}`}>20 minutes</button>
                 </div>
             </section>
         </section>
