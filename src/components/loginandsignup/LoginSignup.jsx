@@ -23,6 +23,8 @@ const LoginSignup = ({ showSignup, setShowSignup }) => {
           label: `${country.name.common} (+${country.idd?.root || ""}${country.idd?.suffixes?.[0] || ""})`,
           value: country.cca2,
         }));
+        console.log(countryNames);
+        
         setCountries(countryNames);
       })
       .catch((error) => {
@@ -47,14 +49,14 @@ const LoginSignup = ({ showSignup, setShowSignup }) => {
           <div></div>
         </div>
         <div className="px-6 py-2 mt-[5rem]">
-          <h2 className="text-[1.5rem] font-semibold mb-2">Welcome to Airbnb</h2>
+          <h2 className="text-[1.5rem] font-semibold mb-2">Welcome to KNLTB</h2>
           <form>
             <div className="relative">
               <div
                 onClick={() => setDropdownVisible(!dropdownVisible)} // Toggle dropdown visibility
                 className="border p-2 rounded-t-md w-full cursor-pointer relative"
               >
-                <span className="block text-gray-500 text-sm">hdgg</span>
+                <span className="block text-gray-500 text-sm">Country code</span>
                 <span className="block text-black font-medium">
                   {
                     countries.find((country) => country.value === selectedCountry)?.label ||

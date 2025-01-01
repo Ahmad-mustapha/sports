@@ -11,8 +11,6 @@ const Homepage = () => {
       <Latestnews />
       <Usefullinks />
       <Partners />
-      {/* <Jobs /> */}
-      {/* <Header /> */}
       <Footer />
     </div>
   )
