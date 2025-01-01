@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useParams, useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/Card";
 import Activity1 from '../../assets/activity1.jpeg'
@@ -40,12 +41,6 @@ const availableSportsData = {
     { id: 3, title: 'Pickleball Match 3', actnum: '2', meter: '30', description: 'Another thrilling Pickleball match.', image: Activity3, date: 'Sep 15 -Dec 31 -', price: '$10,00'  },
     { id: 4, title: 'Pickleball Match 4', actnum: '2', meter: '30', description: 'Another thrilling Pickleball match.', image: Activity4, date: 'Sep 15 -Dec 31 -', price: '$10,00'  },
   ],
-  inAndOut: [
-    { id: 1, title: 'Indoor and Outdoor Match 1', actnum: '2', meter: '30', description: 'Exciting match details for Indoor and Outdoor.', image: Activity1, date: 'Sep 15 -Dec 31 -', price: 'Free'  },
-    { id: 2, title: 'Indoor and Outdoor Match 2', actnum: '2', meter: '30', description: 'Another thrilling Indoor and Outdoor match.', image: Activity2, date: 'Sep 15 -Dec 31 -', price: 'Free'  },
-    { id: 3, title: 'Indoor and Outdoor Match 3', actnum: '2', meter: '30', description: 'Another thrilling Indoor and Outdoor match.', image: Activity3, date: 'Sep 15 -Dec 31 -', price: 'Free'  },
-    { id: 4, title: 'Indoor and Outdoor Match 4', actnum: '2', meter: '30', description: 'Another thrilling Indoor and Outdoor match.', image: Activity4, date: 'Sep 15 -Dec 31 -', price: 'Free'  },
-  ],
   indoor: [
     { id: 1, title: 'Indoor Match 1', actnum: '2', meter: '30', description: 'Exciting match details for Indoor.', image: Activity1, date: 'Sep 15 -Dec 31 -', price: 'Free'  },
     { id: 2, title: 'Indoor Match 2', actnum: '2', meter: '30', description: 'Another thrilling Indoor match.', image: Activity2, date: 'Sep 15 -Dec 31 -', price: 'Free'  },
@@ -61,10 +56,12 @@ const availableSportsData = {
 }
 
 export const SportsCarousel = ({ selectedSport }) => {
+  // const { id } = useParams();
+  // console.log(id);
+  
   const carouselData = availableSportsData[selectedSport] || [];
-  const [visibleSlides, setVisibleSlides] = useState(4); // Default visible slides
+  const [visibleSlides, setVisibleSlides] = useState(4);
 
-  // Function to calculate visible slides based on window width
   const calculateVisibleSlides = () => {
     if (window.innerWidth >= 1024) return 4;
     if (window.innerWidth >= 768) return 3;
@@ -73,53 +70,43 @@ export const SportsCarousel = ({ selectedSport }) => {
   };
 
   useEffect(() => {
-    // Set initial visible slides
     setVisibleSlides(calculateVisibleSlides());
-
-    // Update visible slides on window resize
-    const handleResize = () => {
-      setVisibleSlides(calculateVisibleSlides());
-    };
-
+    const handleResize = () => setVisibleSlides(calculateVisibleSlides());
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <div className="">
-      <Carousel
-        visibleSlides={visibleSlides} // Dynamically set visible slides
-        opts={{ align: "start" }}
-        className="w-full"
-      >
-        <CarouselContent className=''>
-          {carouselData.map(({ id, title, description, image, date, meter, price, actnum }) => (
+    <div>
+      <Carousel visibleSlides={visibleSlides} opts={{ align: "start" }} className="w-full">
+        <CarouselContent>
+          {carouselData.map(({ id, title, description, image, date, meter, price }) => (
             <CarouselItem key={id} className="sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <Card className="relative bg-white lg:h-[380px]">
-                    <div className="absolute right-0 top-0 bg-orange-600 px-4 py-2 rounded-bl-md">
-                        <p className="text-white text-[1.5rem] font-[500]">{meter}</p>
-                        <p className="text-[#fdfdfd] text-[.9rem] font-[500]">KM</p>
-                    </div>
-                    <div className="h-[200px]">
-                      <img
-                          className="w-full h-full object-cover"
-                          src={image || 'Placeholder'}
-                          alt={title}
-                      />
-                    </div>
-                    <CardContent className="flex flex-col justify-between h-[180px]">
-                        <div>
-                            <p className="text-[1rem] font-[500] mt-4">{description}</p>
-                            <p className="text-[#777] text-[.85rem]">{date} {price}</p>
-                        </div>
-                        <div className="flex items-center justify-end mb-4">
-                            <Link to='/' className='text-[white] text-[.85rem] bg-orange-500 font-[500] rounded-[100px] px-2 py-1'> Reserve</Link>
-                        </div>
-                    </CardContent>
-                </Card>
+              <Card className="relative bg-white lg:h-[380px]">
+                <div className="absolute right-0 top-0 bg-orange-600 px-4 py-2 rounded-bl-md">
+                  <p className="text-white text-[1.5rem] font-[500]">{meter}</p>
+                  <p className="text-[#fdfdfd] text-[.9rem] font-[500]">KM</p>
+                </div>
+                <div className="h-[200px]">
+                  <img className="w-full h-full object-cover" src={image || "Placeholder"} alt={title} />
+                </div>
+                <CardContent className="flex flex-col justify-between h-[180px] relative">
+                  <p className="absolute -top-8">{title}</p>
+                  <div>
+                    <p className="text-[1rem] font-[500] mt-4">{description}</p>
+                    <p className="text-[#777] text-[.85rem]">{date} {price}</p>
+                  </div>
+                  <div className="flex items-center justify-end mb-4">
+                    <Link
+                      to={`/clubs/${id}/reserve`}
+                      // state={{ title, image }} // Passing the state here
+                      className="text-[white] text-[.85rem] bg-orange-500 font-[500] rounded-[100px] px-2 py-1"
+                    >
+                      Reserve
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
             </CarouselItem>
           ))}
         </CarouselContent>
@@ -131,5 +118,9 @@ export const SportsCarousel = ({ selectedSport }) => {
 };
 
 SportsCarousel.propTypes = {
-  selectedSport : PropTypes.string.isRequired
-}
+  selectedSport: PropTypes.string.isRequired,
+};
+
+// SportsCarousel.propTypes = {
+//   selectedSport : PropTypes.string.isRequired
+// }
