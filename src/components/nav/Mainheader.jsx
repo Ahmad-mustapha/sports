@@ -124,13 +124,11 @@ const Mainheader = () => {
         </ul>
       </div>
       <div className='flex items-center gap-4 login'>
-        {/* <div className='w-12 bg-blue-950 rounded-lg p-2'><Link><img src={Logo3} alt="" /></Link></div> */}
         <div className='flex items-center gap-[5px] text-white'>
         <button 
         onClick={() => setShowSignup(true)}
         className='text-[white] bg-[#19328A] font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Sign Up</button>
         <span className='shadow-xl border-[1px] border-[#aaa] rounded-full p-[.4rem] '> <TbWorld  className='text-[1.5rem] font-[600] media'/></span>
-        {/* <Link className='shadow-xl border-[1px] border-[#aaa] rounded-full p-[.4rem] '><FiSearch  className='text-[1.3rem] font-[600] media'/></Link> */}
         <Link className='shadow-xl border-[1px] border-[#aaa] rounded-full p-[.4rem] '><MdOutlinePersonOutline className='text-[1.5rem] font-[600] media'/></Link>
       </div>
       </div>
