@@ -72,12 +72,12 @@ export const SideheaderMenu = ({ setShowMenu }) =>{
           )
         } */}
         
-        <Link to='/' onClick={() => setShowMenu(false)} className='hover:underline hover:text-orange-500 sidelink'>Explanation</Link>
-        <Link to='/discover' onClick={() => setShowMenu(false)} className='hover:underline hover:text-orange-500 sidelink'>Discover</Link>
-        <Link onClick={() => setShowMenu(false)} className='hover:underline hover:text-orange-500 sidelink'>To play</Link>
-        <Link to='/download' onClick={() => setShowMenu(false)} className='hover:underline hover:text-orange-500 sidelink'>Download</Link>
-        <Link onClick={() => setShowMenu(false)} className='hover:underline hover:text-orange-500 sidelink'>Map of facilities</Link>
-        <Link to='/clubs' onClick={() => setShowMenu(false)} className='hover:underline hover:text-orange-500 sidelink'>News</Link>
+        <Link to='/' className='hover:underline hover:text-orange-500 sidelink'>Explanation</Link>
+        <Link to='/discover' className='hover:underline hover:text-orange-500 sidelink'>Discover</Link>
+        <Link className='hover:underline hover:text-orange-500 sidelink'>To play</Link>
+        <Link to='/download' className='hover:underline hover:text-orange-500 sidelink'>Download</Link>
+        <Link to='/clubs' className='hover:underline hover:text-orange-500 sidelink'>Map of facilities</Link>
+        <Link to='/news' className='hover:underline hover:text-orange-500 sidelink'>News</Link>
         <div className='mb-20 flex items-center justify-end gap-4'>
         <button 
         onClick={() => setShowSignup(true)}
