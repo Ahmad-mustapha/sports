@@ -38,17 +38,17 @@ const LoginSignup = ({ showSignup, setShowSignup }) => {
   };
 
   return (
-    <div className="fixed top-8 inset-0 z-50 flex items-center justify-center bg-opacity-50 rounded-xl">
+    <div className="fixed top-8 inset-0 z-50 flex items-center justify-center bg-opacity-50 rounded-xl h-[530px] overflow-y-scroll">
       <div className={showSignup ? 'overlay' : ''}
         onClick={() => setShowSignup(false)}
         ></div>
-      <div className="bg-white text-black rounded-xl relative w-[470px] md:w-[600px] explore h-[] overflow-y-scroll scroll overflow-x-hidden">
-        <div className="fixed bg-white z-50 w-[470px] md:w-[600px] flex items-center justify-between mb-4 border-b-[1px] p-4 py-2 border rounded-t-xl">
+      <div className="relative bg-white text-black rounded-xl w-[470px] md:w-[600px] explore h-full overflow-y-scroll scroll overflow-x-hidden">
+        <div className="sticky top-0 right-0 bg-white z-50 flex items-center justify-between mb-4 border-b-[1px] p-4 py-2 border rounded-t-xl">
           <button onClick={() => setShowSignup(false)}  className="text-[2rem]">&times;</button>
           <p className="text-[1rem] font-[600]">Log in or Sign up</p>
           <div></div>
         </div>
-        <div className="px-6 py-2 mt-[5rem]">
+        <div className="px-6 py-2 mt-[]">
           <h2 className="text-[1.5rem] font-semibold mb-2">Welcome to KNLTB</h2>
           <form>
             <div className="relative">
@@ -89,7 +89,6 @@ const LoginSignup = ({ showSignup, setShowSignup }) => {
           </form>
           <div className='flex items-center justify-center relative mt-2'><p className='or'>or</p></div>
           <div className='flex flex-col gap-2'>
-            {/* <div className=''> */}
               <form action="">
                 <button className='w-full flex items-center justify-between border rounded-md shadow-sm p-1 px-4'>
                   <div className='w-[1.8rem]'><img src={Google} alt="" /></div>
@@ -118,7 +117,6 @@ const LoginSignup = ({ showSignup, setShowSignup }) => {
                   <div></div>
                 </button>
               </form>
-            {/* </div> */}
           </div>
         </div>
       </div>
@@ -127,3 +125,9 @@ const LoginSignup = ({ showSignup, setShowSignup }) => {
 };
 
 export default LoginSignup;
+
+
+LoginSignup.propTypes = {
+  showSignup: PropTypes.bool.isRequired, // Boolean prop
+  setShowSignup: PropTypes.bool.isRequired
+};
