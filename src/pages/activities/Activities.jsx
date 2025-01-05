@@ -9,7 +9,7 @@ const Activities = () => {
   const { state } = useLocation();
   const [activeTime, setActiveTime] = useState(false);
 
-
+// frameborder
   // Check if state is passed (for ActivityDetails)
   const isActivityDetails = !!state;
 
@@ -56,7 +56,7 @@ const Activities = () => {
             <div className='rounded-lg bg-[#193291] px-6 py-6 lg:py-8 lg:px-10 text-white'>
                 <p className='font-[600] text-[1.7rem]'>Visiting address</p>
                 <p className='text-[1rem] my-4 font-[500]'>Potjesdam 4, 1722 XN SOUTH <br /> SCHARWOUDE</p>
-                <iframe width="100%" className='h-full' frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps trackers</a></iframe>
+                <iframe width="100%" className='h-full' frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps trackers</a></iframe>
             </div>
             <div className='mt-4 w-full'>
                 <p className='text-[1.2rem] font-[700]'>Club Details</p>

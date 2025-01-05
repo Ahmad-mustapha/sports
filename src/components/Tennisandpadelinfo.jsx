@@ -7,7 +7,7 @@ const sportData = [
     {id: 2, sport: 'Padel', image: Padelman, details: 'Padel is the fastest growing sport in the Netherlands. More and more people discover how much fun padel is and become addicted. Padel is surprising, because the ball always goes a little differently than you expect. In the cage you have to be prepared for everything. Just when you think you are defeated, you unexpectedly get a second chance, for example with the help of the walls. But the fence of the cage also plays a part in the game and you can even play the ball back outside the cage. There are always long and spectacular rallies in every match. In other words: Expect the Unexpected!'}
 ]
 
-const Tennisandpadelinfo = ({ sport, details, image }) => {
+const Tennisandpadelinfo = () => {
   return (
     <ul className='flex flex-wrap gap-4 md:gap-0 md:flex-nowrap'>
       {sportData.map((data, index) =>(

@@ -4,6 +4,7 @@ import Google from '../../assets/googleimage.png'
 import Apple from '../../assets/applelogo.png'
 import Mail from '../../assets/mail.png'
 import Facebook from '../../assets/facebooklogo.png'
+import PropTypes from 'prop-types';
 
 const LoginSignup = ({ showSignup, setShowSignup }) => {
   const [countries, setCountries] = useState([]);

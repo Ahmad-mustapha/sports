@@ -39,7 +39,7 @@ const Eachevent = () => {
 }
 export default Eachevent
 
-export const EacheventActivities = ({ }) => {
+export const EacheventActivities = () => {
   return (
     <ul className='flex flex-col gap-3'>
       {

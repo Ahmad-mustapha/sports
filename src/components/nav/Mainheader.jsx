@@ -1,19 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { IoIosArrowRoundForward } from "react-icons/io";
 import { RxCross1 } from "react-icons/rx";
 import { IoMenuOutline } from "react-icons/io5";
-import { HiOutlineShoppingCart } from "react-icons/hi";
 import { MdOutlinePersonOutline } from "react-icons/md";
 import { TbWorld } from 'react-icons/tb';
 import Logo2 from '../../assets/sportlogo2.svg'
-import Logo3 from '../../assets/knltbid_logo.png'
-import { FiSearch } from 'react-icons/fi';
-import { IoIosArrowDown } from "react-icons/io";
 import { BiSolidTennisBall } from "react-icons/bi";
 import { GiTennisRacket } from 'react-icons/gi';
-import { MdLiveTv } from 'react-icons/md';
 import LoginSignup from '../loginandsignup/LoginSignup';
+import PropTypes from 'prop-types';
 import './navbar.css'
 
 const navLinks = [
@@ -156,3 +151,7 @@ const Mainheader = () => {
 }
 
 export default Mainheader
+
+SideheaderMenu.propTypes = {
+  setShowMenu: PropTypes.bool.isRequired
+}
