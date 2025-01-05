@@ -91,7 +91,7 @@ export const SportsCarousel = ({ selectedSport }) => {
                   <img className="w-full h-full object-cover" src={image || "Placeholder"} alt={title} />
                 </div>
                 <CardContent className="flex flex-col justify-between h-[180px] relative">
-                  <p className="absolute -top-8">{title}</p>
+                  <p className="absolute -top-10 text-white text-[1.4rem] font-[600]">{title}</p>
                   <div>
                     <p className="text-[1rem] font-[500] mt-4">{description}</p>
                     <p className="text-[#777] text-[.85rem]">{date} {price}</p>
