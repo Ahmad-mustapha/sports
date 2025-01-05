@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Girljump from '../assets/girljump.webp'
 import Manplay from '../assets/manplay.webp'
 import Ballsandbat from '../assets/ballsandbat.webp'
+import PropTypes from 'prop-types'
 
 
 export const Twosports = () =>(
@@ -53,3 +54,11 @@ const Meetandplay = () => {
 }
 
 export default Meetandplay
+
+
+Row.propTypes = {
+  title: PropTypes.string.isRequired,
+  detail: PropTypes.string.isRequired,
+  num: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  onMouseEnter: PropTypes.func.isRequired
+}

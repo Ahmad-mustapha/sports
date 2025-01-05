@@ -22,7 +22,7 @@ const Latestnews = () => {
               ${selectedLatestNews === 'padel' ? 'bg-orange-500 text-white': ''}`}>Padel</button>
           </span>
         </div>
-        <section className='sm:flex sm:items-center sm:justify-center'>
+        <section className='sm:flex sm:items-center sm:justify-center mb-10'>
           <Latestnewscarousel selectedLatestNews={selectedLatestNews}/>
         </section>
     </div>
