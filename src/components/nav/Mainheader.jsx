@@ -77,6 +77,10 @@ export const SideheaderMenu = ({ setShowMenu }) =>{
         <button 
         onClick={() => setShowSignup(true)}
         className='text-[white] bg-[#19328A] font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Sign Up</button>
+        <Link 
+        to={`/admin/`}
+        // onClick={() => setShowSignup(true)}
+        className='text-[white] bg-[#19328A] font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Admin panel</Link>
         </div>
       </ul>
       {
@@ -123,6 +127,9 @@ const Mainheader = () => {
         <button 
         onClick={() => setShowSignup(true)}
         className='text-[white] bg-[#19328A] font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Sign Up</button>
+        <Link 
+        to={`/admin`}
+        className='text-[white] bg-[#19328A] font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Admin panel</Link>
         <span className='shadow-xl border-[1px] border-[#aaa] rounded-full p-[.4rem] '> <TbWorld  className='text-[1.5rem] font-[600] media'/></span>
         <Link className='shadow-xl border-[1px] border-[#aaa] rounded-full p-[.4rem] '><MdOutlinePersonOutline className='text-[1.5rem] font-[600] media'/></Link>
       </div>

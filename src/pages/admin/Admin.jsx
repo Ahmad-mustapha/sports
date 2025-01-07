@@ -1,8 +1,15 @@
 import React from 'react'
+import Mainheader from '../../components/nav/Mainheader'
+import { Outlet } from 'react-router-dom'
 
 const Admin = () => {
   return (
-    <div>Admin</div>
+    <div>
+      <Mainheader />
+      <section>
+
+      </section>
+    </div>
   )
 }
 

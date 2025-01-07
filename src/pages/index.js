@@ -8,4 +8,6 @@ export { default as Clubdetails } from '../pages/clubs/Clubdetails'
 export { default as Activities } from '../pages/activities/Activities'
 export { default as Reserve } from '../pages/activities/Reserve'
 export { default as Admin } from '../pages/admin/Admin'
+export { default as Matches } from '../pages/matches/Matches'
+
 

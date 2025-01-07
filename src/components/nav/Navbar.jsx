@@ -1,24 +1,15 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { GiTennisRacket } from "react-icons/gi";
-// import { HiOutlineShoppingCart } from "react-icons/hi";
-// import { MdOutlinePersonOutline } from "react-icons/md";
-// import { GiTeacher } from "react-icons/gi";
-// import { MdLiveTv } from "react-icons/md";
 import { BiSolidTennisBall } from "react-icons/bi";
-// import { IoIosArrowDown } from "react-icons/io";
-// import { FiSearch } from "react-icons/fi";
-// import Pickleball from '../../assets/pickleball (1).png'
 import './navbar.css'
 const navLinks = [
-    // {text: 'KNLTB', icon: '', link: '/knltb'},
     {text: 'Tennis', icon: <BiSolidTennisBall />, link: '/tennis'},
     {text: 'Padel', icon: <GiTennisRacket />, link: '/padel'},
     {text: 'Pickleball', icon: <GiTennisRacket />, link: '/pickleball'},
     {text: 'Associations', icon: '', link: '/association'},
     {text: 'Centers', icon: '', link: '/centers'},
     {text: 'Teachers', icon: '', link: '/teachers'},
-    // {text: 'KNLTB TV', icon: <MdLiveTv />, link: '/knltb tv'},
 ]
 
 const sports = [
