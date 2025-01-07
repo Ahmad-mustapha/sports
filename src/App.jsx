@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
-import { Homepage, Clubs, Clubdetails, Discover, Download, Eventdetails, Activities, Reserve, News, Admin, Matches } from './pages/index'
+import { Homepage, Clubs, Clubdetails, Discover, Download, Eventdetails, Activities, Reserve, News } from './pages/index'
+import { Admin, Matches } from './admin/pages/index'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
