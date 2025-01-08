@@ -40,7 +40,7 @@ const Admin = () => {
       headerText = 'Dashboard';
   }
   return (
-    <div className='layout overflow-x-hidden'>
+    <div className='layout overflow-x-hidden bg-white h-screen'>
       <div className='border[1px] h-0 border-black lg:h-screen fixed top-0 left-0 bottom-0 lg:w-[300px] w-full'>
        <Adminsidebar />
       </div>

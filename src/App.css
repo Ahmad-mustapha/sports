@@ -81,3 +81,10 @@ li{
 .allbuttons{
     background-color: white;
 }
+.num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.1rem;
+    flex-wrap: wrap;
+  }
