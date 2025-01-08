@@ -35,7 +35,7 @@ const Adminheader = () => {
             <p className="font-[500] text-[.95rem] ">Email</p>
             <IoIosArrowDown />
           </div>
-          {showDropdown && (
+          {/* {showDropdown && (
             <div className="dropdown-menu absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 z-[1000]">
               <Link
                 to=""
@@ -49,7 +49,7 @@ const Adminheader = () => {
                 Logout
               </button>
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </div>

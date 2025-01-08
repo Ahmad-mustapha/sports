@@ -5,6 +5,7 @@ import { IoMenuOutline } from "react-icons/io5";
 import { MdOutlineClose } from 'react-icons/md';
 import { BsCart3 } from "react-icons/bs";
 import { Audio } from 'react-loader-spinner';
+import Logo2 from '../../../assets/sportlogo2.svg'
 
 
 const Adminsidebar = () => {
@@ -38,9 +39,31 @@ const Adminsidebar = () => {
       )}
       <nav className={`allNav lg:h-screen h-[5rem]`}>
         <div className="logo flex item-center justify-center">
-          <Link to="/"><img src={`Logo`} alt="Logo" /></Link>
+          <Link to="/"><img src={Logo2} alt="Logo" /></Link>
         </div>
-        <div className='menu lg:hidden flex flex-row justify-end items-end'>
+        <ul id='sidebar' className={`md:flex flex-col space-y-7 mt-4`}>
+          {navbar.map((nav) => (
+            <li key={nav.id} className={`text-[.9rem] py-2 pl-[1.3rem] cursor-pointer rounded-3x ${nav.text === 'Logout' ? 'text-red-500' : 'text-gray-500'} ${location.pathname === nav.link ? 'bg-orange-500 rounded-full text-white' : ''}`}>
+              {nav.text === 'Logout' ? 
+                <span onClick={handleLogoutClick} className='font-bold'>{nav.text}</span> 
+                : <Link onClick={() => setOpenMenu(false)} to={nav.link} className='font-semibold'>{nav.text}</Link>
+              }  
+            </li>
+          ))}
+        </ul>
+        
+        <div onClick={() => setOpenMenu(false)} className={`${openMenu ? 'overlay' : 'hidden'}`}></div>
+        <ul className={`lg:flex lg:flex-col space-y-7 ${openMenu ? 'show' : 'hidden'}`}>
+          {navbar.map((nav) => (
+            <li key={nav.id} className={`text-[.9rem] py-2 pl-[1.3rem] cursor-pointer rounded-3x ${nav.text === 'Logout' ? 'text-red-500' : 'text-gray-500'} ${location.pathname === nav.link ? 'bg-orange-500 rounded-full text-white' : ''}`}>
+              {nav.text === 'Logout' ? 
+                <span onClick={handleLogoutClick} className='font-bold'>{nav.text}</span> 
+                : <Link onClick={() => setOpenMenu(false)} to={nav.link} className='font-semibold'>{nav.text}</Link>
+              }  
+            </li>
+          ))}
+        </ul>
+        <div className='menu icons'>
           <div className='flex items-center space-x-4'>
             <Link to='/cart'>
               <div className='relative'>
@@ -54,17 +77,6 @@ const Adminsidebar = () => {
             }
           </div>
         </div>
-        <div onClick={() => setOpenMenu(false)} className={`${openMenu ? 'overlay' : 'hidden'}`}></div>
-        <ul className={`lg:flex lg:flex-col space-y-7 ${openMenu ? 'show' : 'hidden'}`}>
-          {navbar.map((nav) => (
-            <li key={nav.id} className={`text-[.9rem] py-2 pl-[1.3rem] cursor-pointer rounded-3x ${nav.text === 'Logout' ? 'text-red-500' : 'text-gray-500'} ${location.pathname === nav.link ? 'bg-orange-500 rounded-full text-white' : ''}`}>
-              {nav.text === 'Logout' ? 
-                <span onClick={handleLogoutClick} className='font-bold'>{nav.text}</span> 
-                : <Link onClick={() => setOpenMenu(false)} to={nav.link} className='font-semibold'>{nav.text}</Link>
-              }  
-            </li>
-          ))}
-        </ul>
       </nav>
         
     </>

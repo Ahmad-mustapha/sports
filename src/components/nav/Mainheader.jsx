@@ -78,7 +78,7 @@ export const SideheaderMenu = ({ setShowMenu }) =>{
         onClick={() => setShowSignup(true)}
         className='text-[white] bg-[#19328A] font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Sign Up</button>
         <Link 
-        to={`/admin/`}
+        to={`/admin/matches`}
         // onClick={() => setShowSignup(true)}
         className='text-[white] bg-[#19328A] font-[500] rounded-[100px] p-2 px-4 flex items-center gap-1'>Admin panel</Link>
         </div>
