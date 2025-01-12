@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import { Homepage, Clubs, Clubdetails, Discover, Download, Eventdetails, Activities, Reserve, News } from './pages/index'
-import { Admin, Matches } from './admin/pages/index'
+import { Admin, Matches, Tournaments, Calender, History } from './admin/pages/index'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -19,7 +19,10 @@ function App() {
           <Route path='clubs/:id/activities' element={<Activities />}/>
           <Route path='clubs/:id/reserve' element={<Reserve />}/>
           <Route path='admin' element={<Admin />}>
-            <Route path='matches' element={<Matches />}/>
+            <Route index element={<Matches />}/>
+            <Route path='tournament' element={<Tournaments />}/>
+            <Route path='history' element={<History />}/>
+            <Route path='calender' element={<Calender />}/>
           </Route>
         </Routes>
       </BrowserRouter>

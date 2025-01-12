@@ -5,12 +5,12 @@ import { IoIosArrowDown } from "react-icons/io";
 import './header.css'
 
 
-const Adminheader = () => {
+const Adminheader = ({ headerText }) => {
     const [showDropdown, setShowDropdown] = useState(false);
   return (
     <div className="header static lg:ml-[300px] flex h-[5rem] flex-grow items-start md:items-start lg:items-center justify-between p-[1rem] border-[#CECFDA] border-b-[1px]">
       <div>
-        <p className={`text-[1.3rem] font-[600] text-gray-700`}>text</p>
+        <p className={`text-[1.3rem] font-[600] text-gray-700`}>{headerText}</p>
       </div>
       <div className="headerText flex   items-center space-x-0 md:space-x-4 flex-wrap  ">
         <div className="accBalance flex pb-5 lg:pb-0 items-center lg:space-x-4 text-[1rem] font-[400]">

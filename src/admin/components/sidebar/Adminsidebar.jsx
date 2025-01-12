@@ -10,15 +10,18 @@ import Logo2 from '../../../assets/sportlogo2.svg'
 
 const Adminsidebar = () => {
   const navigate = useNavigate();
+  const location = useLocation()
+  console.log(location
+  )
   const [openMenu, setOpenMenu] = useState(false);
   const [loading, setLoading] = useState(false);
   const [showLogoutModal, setShowLogoutModal] = useState(false);
 
   const navbar = [
     { id: 1, text: 'Upcoming matches', link: '/admin' },
-    { id: 2, text: 'Upcoming Tournaments', link: '/Domainlist' },
-    { id: 3, text: 'Calender', link: '/Expired' },
-    { id: 4, text: 'History', link: '/Sslcertificate' },
+    { id: 2, text: 'Upcoming Tournaments', link: '/admin/tournament' },
+    { id: 3, text: 'Calender', link: '/admin/calender' },
+    { id: 4, text: 'History', link: '/admin/history' },
   ];
 
   const handleLogoutClick = () => {

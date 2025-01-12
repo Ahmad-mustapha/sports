@@ -10,18 +10,18 @@ const Admin = () => {
   const userEmail = localStorage.getItem('userEmail')
 
   let headerText = '';
-  // console.log(location.pathname);
+  console.log(location.pathname);
   switch (location.pathname) {
-    case '/matches':
+    case '/admin':
       headerText = 'Upcoming matches';
       break;
-    case '/tournament':
+    case '/admin/tournament':
       headerText = 'Upcoming Tournaments';
       break;
-    case '/calender':
+    case '/admin/calender':
       headerText = 'Calender';
       break;
-    case '/history':
+    case '/admin/history':
       headerText = 'History';
       break;
     default:
@@ -33,7 +33,7 @@ const Admin = () => {
        <Adminsidebar />
       </div>
       <div className='w-full'>
-          <Adminheader />
+          <Adminheader headerText={headerText}/>
           <div className='lg:ml-[300px]'>{<Outlet />}</div>
       </div>
     </div>
