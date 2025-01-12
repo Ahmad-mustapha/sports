@@ -12,32 +12,20 @@ const Admin = () => {
   let headerText = '';
   // console.log(location.pathname);
   switch (location.pathname) {
-    case '/dashboard':
-      headerText = 'Dashboard';
+    case '/matches':
+      headerText = 'Upcoming matches';
       break;
-    case '/Domainlist':
-      headerText = 'Domain List';
+    case '/tournament':
+      headerText = 'Upcoming Tournaments';
       break;
-    case '/Expired':
-      headerText = 'Expiring/Expired';
+    case '/calender':
+      headerText = 'Calender';
       break;
-    case '/Hosting':
-      headerText = 'Hosting';
-      break;
-    case '/Privateemail':
-      headerText = 'Private Email';
-      break;
-    case '/Sslcertificate':
-      headerText = 'SSL Certificate';
-      break;
-    case '/Profile':
-      headerText = 'Profile';
-      break;
-    case '/cart':
-      headerText = 'Dashboard > Cart';
+    case '/history':
+      headerText = 'History';
       break;
     default:
-      headerText = 'Dashboard';
+      headerText = 'Upcoming matches';
   }
   return (
     <div className='layout overflow-x-hidden bg-white h-screen'>
@@ -53,10 +41,3 @@ const Admin = () => {
 }
 
 export default Admin
-
-
-// Sidebar is necessary and needs to have just 3 "options"
-// Instead of Dashboard - Upcoming matches
-// Instead of Domain List - Upcoming tournaments/events
-// Instead of Expiring/Expired - Calendar
-// Instead of SSL Certificate - History
