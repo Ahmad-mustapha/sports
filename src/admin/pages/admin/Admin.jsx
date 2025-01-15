@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Adminheader, Adminsidebar } from '../../components'
 import { Outlet } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
+import { Mainheader } from '../../../components'
 import './admin.css'
 
 const Admin = () => {
@@ -29,10 +30,11 @@ const Admin = () => {
   }
   return (
     <div className='layout overflow-x-hidden bg-white h-screen'>
-      <div className='border[1px] h-0 border-black lg:h-screen fixed top-0 left-0 bottom-0 lg:w-[300px] w-full'>
+      <div className='border[1px] h-0 border-black lg:h-screen fixed top-[5rem] left-0 bottom-0 lg:w-[300px] w-full'>
        <Adminsidebar />
       </div>
       <div className='w-full'>
+          <Mainheader />
           <Adminheader headerText={headerText}/>
           <div className='lg:ml-[300px]'>{<Outlet />}</div>
       </div>

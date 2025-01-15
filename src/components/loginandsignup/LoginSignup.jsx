@@ -40,7 +40,7 @@ const LoginSignup = ({ showSignup, setShowSignup }) => {
 
   return (
     <div className="fixed top-8 inset-0 z-50 flex items-center justify-center bg-opacity-50 rounded-xl h-[530px] overflow-y-scroll">
-      <div className={showSignup ? 'overlay' : ''}
+      <div className={showSignup ? 'overlays' : ''}
         onClick={() => setShowSignup(false)}
         ></div>
       <div className="relative bg-white text-black rounded-xl w-[470px] md:w-[600px] explore h-full overflow-y-scroll scroll overflow-x-hidden">

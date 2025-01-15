@@ -115,7 +115,7 @@ export const Latestnewscarousel = ({ selectedLatestNews }) => {
         articleModal && (
           <>
             <div className="fixed top-8 inset-0 z-50 flex items-center justify-center bg-opacity-50 h-[80vh]">
-            <div className={articleModal ? 'overlay' : ''}
+            <div className={articleModal ? 'overlays' : ''}
               onClick={closeModal}
               ></div>
               <div className="bg-white rounded-lg max-w-lg w-full p-6 relative explore">
