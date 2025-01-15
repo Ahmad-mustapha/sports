@@ -68,12 +68,12 @@ const Adminsidebar = () => {
         </ul>
         <div className='menu icons'>
           <div className='flex items-center space-x-4'>
-            <Link to='/cart'>
+            {/* <Link to='/cart'>
               <div className='relative'>
                 <span className='cartNum'>12</span>
                 <BsCart3 className='text-[1.4rem]' />
               </div>
-            </Link>
+            </Link> */}
             {!openMenu ? 
               <IoMenuOutline className='text-[2rem] cursor-pointer' onClick={() => setOpenMenu(true)} /> 
               : <MdOutlineClose className='text-[2rem] cursor-pointer' onClick={() => setOpenMenu(false)} />

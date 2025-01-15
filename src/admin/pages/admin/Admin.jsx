@@ -11,7 +11,6 @@ const Admin = () => {
   const userEmail = localStorage.getItem('userEmail')
 
   let headerText = '';
-  console.log(location.pathname);
   switch (location.pathname) {
     case '/admin':
       headerText = 'Upcoming matches';

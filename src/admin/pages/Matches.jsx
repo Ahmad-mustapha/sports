@@ -1,4 +1,5 @@
 import React from 'react'
+import Clubdetailsadmin from '../components/clubedetails/Clubdetailsadmin'
 
 export function Numbersheading({ number, item }) {
   return (
@@ -13,19 +14,12 @@ export function Numbersheading({ number, item }) {
 const Matches = () => {
   return (
     <div className="py-4 px-4">
+      <Clubdetailsadmin />
       <div className="py-4 px-4 num">
-        <div>
-          <Numbersheading number={10} item="Tennis" />
-        </div>
-        <div>
-          <Numbersheading number={12} item="Padel" />
-        </div>
-        <div>
-          <Numbersheading number={12} item="Basketball" />
-        </div>
-        <div>
-          <Numbersheading number={13} item="Football" />
-        </div>
+        <div><Numbersheading number={10} item="Tennis" /></div>
+        <div><Numbersheading number={12} item="Padel" /></div>
+        <div><Numbersheading number={12} item="Basketball" /></div>
+        <div><Numbersheading number={13} item="Football" /></div>
       </div>
       <div className="p-[1.3rem] flex-grow">
         <p className="font-[600] md:block text-[20px] mb-4">My matches</p>
