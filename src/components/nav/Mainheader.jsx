@@ -127,7 +127,6 @@ const Mainheader = () => {
           <LoginSignup showSignup={showSignup} setShowSignup={setShowSignup}/>
         )
       }
-      {/* <Link><FiSearch className='text-orange-500 mr-8 font-[500] text-[1.2rem]'/></Link> */}
     </div>
   )
 }

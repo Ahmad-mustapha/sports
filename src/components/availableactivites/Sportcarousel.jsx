@@ -120,7 +120,3 @@ export const SportsCarousel = ({ selectedSport }) => {
 SportsCarousel.propTypes = {
   selectedSport: PropTypes.string.isRequired,
 };
-
-// SportsCarousel.propTypes = {
-//   selectedSport : PropTypes.string.isRequired
-// }

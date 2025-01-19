@@ -4,16 +4,6 @@ import Manplay from '../assets/manplay.webp'
 import Ballsandbat from '../assets/ballsandbat.webp'
 import PropTypes from 'prop-types'
 
-
-export const Twosports = () =>(
-    <div>
-        <p></p>
-        <p></p>
-    </div>
-)
-
-
-
 export const Row = ({ title, detail, num, onMouseEnter }) =>{
     return(
         <div 

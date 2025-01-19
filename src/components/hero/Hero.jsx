@@ -24,10 +24,6 @@ function Hero() {
   const [ activeSport, setActiveSport ] = useState('All sports')
   // console.log(selectedSport);
 
-  // const handleSportChange = (sport) => {
-  //   setSelectedSport(sport);
-  // };
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -88,13 +84,11 @@ function Hero() {
                     className='outline-none border-[1px] rounded-sm w-full p-4'
                     type="text" />
                 </div>
-                {/* <div className='w-full lg:w-[350px]'> */}
                   <select className='w-full lg:w-[350px] outline-none border-[1px] rounded-sm p-4' name="" id="">
                     <option className='outline-none border-[1px] rounded-sm w-full p-4' value="indoorandoutdoor">Indoor and Outdoor</option>
                     <option className='outline-none border-[1px] rounded-sm w-full p-4' value="indoor">Indoor</option>
                     <option className='outline-none border-[1px] rounded-sm w-full p-4' value="outdoor">Outdoor</option>
                   </select>
-                {/* </div> */}
                 <div className='w-full lg:w-[350px] relative'>
                     <input
                     placeholder='' 

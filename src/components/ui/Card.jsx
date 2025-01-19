@@ -1,4 +1,3 @@
-// src/components/ui/card.jsx
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -28,20 +27,4 @@ CardContent.propTypes = {
   className: PropTypes.string.isRequired
 }
 
-
-// export const Tenniscard = () =>{
-//     return(
-//         <div className={`bg-white w-full md:250px lg:w-[230px] xl:w-[290px] relative ${className}`}>
-//             {children}
-//         </div>
-//     )
-// }
-
-// export const TennisCardContent = ({ children, className }) => {
-//     return (
-//       <div className={`p-4 ${className}`}>
-//         {children}
-//       </div>
-//     );
-//   };
   
