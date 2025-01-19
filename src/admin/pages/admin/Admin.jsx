@@ -34,7 +34,7 @@ const Admin = () => {
       </div>
       <div className='w-full'>
           <Mainheader />
-          <Adminheader headerText={headerText}/>
+          <div><Adminheader headerText={headerText}/></div>
           <div className='lg:ml-[300px]'>{<Outlet />}</div>
       </div>
     </div>

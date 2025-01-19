@@ -19,9 +19,7 @@ const Reserve = () => {
       <div className="flex pt-4 mt-4 px-8 md:px-14 gap-4">
         <Link className="hover:underline hover:text-orange-500" to="/">Meet and Play</Link>
         <Link className="hover:underline hover:text-orange-500" to="/clubs">Clubs</Link>
-        {/* <p className="text-orange-500">{state?.title}</p> */}
       </div>
-
       <section className="py-6 px-8 md:px-14 flex flex-wrap md:flex-nowrap gap-6 mb-6">
         <aside className="w-full md:w-4/6">
           <h1 className="text-[3rem] font-[800] text-[#262727]">{state?.title}</h1>
@@ -60,12 +58,11 @@ const Reserve = () => {
             </div>
             <div className='mt-4 w-full'>
                 <p className='text-[1.2rem] font-[700]'>Club Details</p>
-                {/* <div className='bg-white w-full sm:w-3/5 md:w-full h-[16rem]'><img className='h-full w-full' src={state.image} alt="" /></div> */}
                 <div>
-                    <p className='text-[.95rem] font-[700]'>Contact</p>
-                    <p>+31 513 632 363</p>
-                    <p>info@plantwee.nl</p>
-                    <Link>www.plantwee.nl</Link>
+                  <p className='text-[.95rem] font-[700]'>Contact</p>
+                  <p>+31 513 632 363</p>
+                  <p>info@plantwee.nl</p>
+                  <Link>www.plantwee.nl</Link>
                 </div>
                 <div className='mt-6'>
                     <p className='text-[.95rem] font-[700]'>Accommodation</p>

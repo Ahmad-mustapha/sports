@@ -19,24 +19,9 @@ const navLinks = [
   {text: 'Associations', icon: '', link: '/association'},
   {text: 'Centers', icon: '', link: '/centers'},
   {text: 'Teachers', icon: '', link: '/teachers'},
-  // {text: 'KNLTB TV', icon: <MdLiveTv />, link: '/knltb tv'},
 ]
 
-// export const SidebarNenu = () =>{
-//   return(
-//     <div>
-//       <ul className='w-full bg-[#19328A] absolute top-[rem] left-0 h-[] flex flex-col justify-start gap-2 text-white z-50'>
-//             {navLinks to='/clubs'.map((link, index) =>(
-//                 // <li  className=''>
-//                 <Link key={index} className='flex items-center gap-1 text-[.94rem] p-4 sidelink'><span className='text-[1.2rem] font-[600]'>{link.icon}</span>{link.text}</Link>
-//                 // </li>
-//             ))}
-//         </ul>
-//     </div>
-//   )
-// }
-
-export const SideheaderMenu = ({ setShowMenu }) =>{
+export const SideheaderMenu = () =>{
   const [ showSidebar, setShowSidebar ] = useState(false)
   const [ showSignup, setShowSignup ] = useState(false)
   useEffect(() => {
@@ -57,16 +42,6 @@ export const SideheaderMenu = ({ setShowMenu }) =>{
   return(
     <div>
       <ul className='sideheaderNav w-full bg-white fixed top-[4.5rem] left-0 h-screen flex flex-col justify-start gap-6 text-black z-40 overflow-y-scroll'>
-        {/* <div onClick={handleSidebar} className='flex cursor-pointer items-center justify-between bg-[#19328A] px-2 py-4 text-white -mt-4 -mx-4 -mb-6 border-b-[1px] border-[#bbb]'>
-          <p className='font-[700] text-[1rem]'>KNLTB Meet & Play</p>
-          <IoIosArrowDown className='cursor-pointer' onClick={handleSidebar}/>
-        </div>
-        {
-          showSidebar && (
-            <SidebarNenu />
-          )
-        } */}
-        
         <Link to='/' className='hover:underline hover:text-orange-500 sidelink'>Explanation</Link>
         <Link to='/discover' className='hover:underline hover:text-orange-500 sidelink'>Discover</Link>
         <Link className='hover:underline hover:text-orange-500 sidelink'>To play</Link>

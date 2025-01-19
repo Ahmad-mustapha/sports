@@ -73,7 +73,6 @@ const Activities = () => {
                 </div>
             </div>
         </aside>
-        {/* Sidebar with club details */}
       </section>
       <section>
         <Usefullinks />

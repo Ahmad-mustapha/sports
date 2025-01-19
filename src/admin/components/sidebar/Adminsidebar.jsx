@@ -3,9 +3,7 @@ import './sidebar.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { IoMenuOutline } from "react-icons/io5";
 import { MdOutlineClose } from 'react-icons/md';
-import { BsCart3 } from "react-icons/bs";
 import { Audio } from 'react-loader-spinner';
-import Logo2 from '../../../assets/sportlogo2.svg'
 
 
 const Adminsidebar = () => {
@@ -41,9 +39,6 @@ const Adminsidebar = () => {
         </div>
       )}
       <nav className={`allNav lg:h-screen h-[5rem]`}>
-        {/* <div className="logo flex item-center justify-center">
-          <Link to="/"><img src={Logo2} alt="Logo" /></Link>
-        </div> */}
         <ul id='sidebar' className={`md:flex flex-col space-y-7 mt-4`}>
           {navbar.map((nav) => (
             <li key={nav.id} className={`text-[.9rem] py-2 pl-[1.3rem] cursor-pointer rounded-3x ${nav.text === 'Logout' ? 'text-red-500' : 'text-gray-500'} ${location.pathname === nav.link ? 'bg-orange-500 rounded-full text-white' : ''}`}>
@@ -68,12 +63,6 @@ const Adminsidebar = () => {
         </ul>
         <div className='menu icons'>
           <div className='flex items-center space-x-4'>
-            {/* <Link to='/cart'>
-              <div className='relative'>
-                <span className='cartNum'>12</span>
-                <BsCart3 className='text-[1.4rem]' />
-              </div>
-            </Link> */}
             {!openMenu ? 
               <IoMenuOutline className='text-[2rem] cursor-pointer' onClick={() => setOpenMenu(true)} /> 
               : <MdOutlineClose className='text-[2rem] cursor-pointer' onClick={() => setOpenMenu(false)} />

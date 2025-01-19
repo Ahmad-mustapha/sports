@@ -3,11 +3,6 @@ import { Link } from "react-router-dom"
 import { Mainheader } from "../../components"
 import Map from '../../assets/dummymap.png'
 import Location from "./Location"
-import { IoMdTennisball } from 'react-icons/io'
-import { GiTennisRacket } from "react-icons/gi";
-import { MdOutlineSportsBaseball } from 'react-icons/md';
-import { FaBasketball } from 'react-icons/fa6';
-import { IoMdFootball } from 'react-icons/io';
 import { MdKeyboardDoubleArrowRight } from "react-icons/md"
 import {Usefullinks, Footer, Partners} from "../../components"
 

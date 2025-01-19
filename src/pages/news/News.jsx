@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { Mainheader, Footer, Usefullinks, Partners } from '../../components'
 import Latestnews from '../../components/Latestnews/Latestnews'
 

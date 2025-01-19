@@ -2,7 +2,7 @@
     @apply h-[5rem] px-8 md:px-14  py-6 bg-red-600 flex items-center justify-between relative
 }
 .mainheader{
-    @apply px-8 md:px-14 py-6 text-white h-[4.5rem] bg-green-600 flex items-center justify-between
+    @apply px-8 md:px-14 py-6 text-white h-[4.5rem] bg-green-600 flex items-center justify-between sticky top-0 w-full z-50
 }
 .mainheaderNav{
     @apply flex items-center gap-6 text-[#ffff]
@@ -22,9 +22,6 @@
 @media screen and (max-width: 1060px) {
     .navbar{
         @apply hidden
-    }
-    .mainheader{
-        /* @apply hidden */
     }
     .mainheaderNav{
         @apply hidden
