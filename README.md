@@ -5,7 +5,7 @@ A web application that provides live updates, schedules, or scores for various s
 
 ## Live Demo
 
-[View Live Demo]('https://sports-wja9.vercel.app)
+[View Live Demo](https://sports-wja9.vercel.app)
 
 
 ## Technologies Used
